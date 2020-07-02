@@ -2,10 +2,100 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Лекция Excel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 <body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-md-offset-2">
 
+            <div class="sticker-left" data-sticker="Лекция №9"><div class="text-center lec"><h1 class="text-center">Форматирование данных</h1></div></div>
+
+            <div class="sticker-right sticker-info" data-sticker="Аннотация">
+<pre>
+    <code>Лекция посвящена вопросам оформления числовых данных. Дано понятие числового формата.Приведены примеры использования различных<br>форматов для числовых данных, дат и времени.Показано использование денежного и финансового формата. Рассмотрены форматы дробных чисел.<br>Дано представление о личных числовых форматах. Показана структура числового формата. Представлена процедура создания и настройки<br>личного числового формата. Показаны возможности установки и использования условий при применении личных форматов. Отмечены особенности<br>личных форматов чисел, дат и времени. Показана возможность добавления текста, отображаемого в ячейке вместе с числом или вводимым с<br>клавиатуры текстом. Приведена процедура удаления личного формата
+    </code>
+</pre>
+            </div>
+
+            <div class="sticker-left sticker-danger text-left" data-sticker="Установка числовых форматов">
+                 Под числами в Microsoft Excel понимаются собственно числа, включая числа с десятичными и/или простыми дробями и числа с указанием символа процентов, а также даты и время.<br/>
+
+                Форматирование чисел используется для более удобного представления данных на листе.<br>
+
+                Устанавливать числовые форматы можно как для чисел, введенных с клавиатуры или импортированных, так и для результатов вычислений. Значение введенного или импортированного числа или результата вычислений при установке формата не изменяется. Установленный числовой формат сохраняется после очистки содержимого ячейки, изменения формулы, обновления импортированных связанных данных.<br>
+
+                При установке формата отображение введенного числа в строке формул и в ячейке может отличаться. Но именно значение числа, отображаемое в строке формул, будет использоваться при вычислениях, сортировках и т. д.<br>
+
+                Точно так же как отформатированное число отображается на листе, оно будет и напечатано.<br>
+
+                Для установки числовых форматов используют элементы группы  вкладки <span class="font-weight-bold">Главная</span>, а также вкладку <span class="font-weight-bold">Число</span> диалогового окна <span class="font-weight-bold">Формат ячеек</span><br>
+                Основные числовые форматы можно выбрать в раскрывающемся списке <span class="font-weight-bold">Числовой формат.</span><br>
+                <div class="col-md-8">
+                <div class="item">
+                    <img class="w-100" src="img/01.gif" alt="">
+                    <div class="item-caption">
+                        <h3>Нахождение числового формата</h3>
+                        <p>Скриншот 9.1
+                        </p>
+                    </div>
+                </div>
+                </div>
+
+                <ol class="list-counter-circle">
+                    <li>Выделите ячейку или диапазон ячеек.</li>
+                    <li>Щелкните по стрелке списка Числовой формат группы Число вкладки <span class="font-weight-bold">Главная</span> и выберите нужный формат
+                        <button type="button" class="btn btn-success d-table-cell align-middle" data-toggle="modal" data-target="#modalCard">
+                            Скрин 9.2
+                        </button>
+                     </li>
+                </ol>
+            </div>
+            <div class="sticker-left sticker-danger text-center" data-sticker="Установка числовых форматов">
+
+            </div>
+
+            <div class="sticker-right sticker-warning text-center" data-sticker="Color Information">background: #f0ad4e</div>
+
+            <div class="sticker-left sticker-success text-center" data-sticker="Color Information">background: #5cb85c</div>
+
+            <div class="sticker-right sticker-inverse text-center" data-sticker="Color Information">background: #222</div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalCard">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="card text-center border border-success text-success">
+                <div class="card-body">
+                    <i class="fa fa-check-circle fa-5x"></i>
+                    <h4 class="card-title">Денежный формат</h4>
+                    <p class="card-text">Скриншот 9.2</p>
+                    <div class="col-md-12">
+                            <img class="w-100" src="img/02.gif" alt="">
+                    </div>
+                    <a href="#" class="btn btn-success">На вверх</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div  id="lightbox-container" class=" justify-content-center align-items-center">
+
+    <div id="lightbox-item" class="d-flex align-items-center justify-content-between">
+
+        <i id="close" class="far fa-times-circle"></i>
+        <i id="prev" class="far m-2 fa-arrow-alt-circle-left"></i>
+        <i id="next" class="far m-2 fa-arrow-alt-circle-right"></i>
+    </div>
+</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="JS/script.js"></script>
 </html>
