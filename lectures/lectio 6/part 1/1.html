@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Лек-я 6. Стр.1</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<!-- Внешний блок -->
+<div class="vn">
+<table>
+		<tr>
+			<td>
+				<a href=""><span style='color:#95B3D7; mso-themecolor:accent1;mso-themetint:153'><< предыдущая лекция</span></a>
+			</td>
+			<td>
+				<p style="margin-left:467px"><a href="2.html"><span style='color:#95B3D7; mso-themecolor:accent1;mso-themetint:153'>следующая страница &gt;&gt;</span></a>
+			</td>
+		</tr>
+	</table>
+	<h2>Лекция 6: Основы вычислений</h2>
+	<hr>
+	<!-- Аннотация -->
+	<div>
+		<p class="an"><b>Аннотация:</b> Лекция посвящена основам вычислений с использованием формул в Microsoft Excel 2016. 
+		Даны определения основных понятий, рассмотрена структура формулы. Приведена информация об операторах формул и примеры 
+		их использования. Изучаются различные способы создания и редактирования формул. Рассмотрено перемещение и копирование 
+		формул. Рассмотрены особенности использования ссылок в формулах. Показано использование ссылок на ячейки других листов
+		и книг. Отмечены особенности использования абсолютных ссылок. Показано использование трехмерных ссылок при вычислении 
+		данных, расположенных на различных листах. Рассмотрено использование в формулах именованных ячеек и диапазонов. 
+		Рассмотрены ситуации типичных ошибок в формулах. Приведены примеры ошибок и способы их исправления. Показана 
+		возможность трассировки связей между формулами и ячейками. Рассмотрены настройки режима вычислений. Показана 
+		возможность пошагового вычисления сложных формул</p>
+		<p class="an"><b>Ключевые слова: </b><a href="">автозавершение</a>, <a href=""> зависимая ячейка</a></p>
+	</div>
+	<!--********************************************************************************************************************-->
+	<hr>
+	<!-- О формулах -->
+	<div>
+		<h3>О формулах</h3>
+		<h4 class="h4">Структура формулы</h4>
+		<p class="p1">Формулы представляют собой выражения, по которым выполняются вычисления. Формула всегда начинается со 
+		знака равно ( = ). Формула может включать функции, ссылки на ячейки или имена, операторы и константы.</p>
+		<p class="p">Например, в формуле</p>
+		<p class="p" style="text-indent:10px;"><span class="colortxt">=СУММ(В2:В8)*30</span></p>
+		<p class="p" style="text-indent:10px;"><span class="colortxt">СУММ()</span> – функция;</p>
+		<p class="p" style="text-indent:10px;"><span class="colortxt">В2</span> и <span class="colortxt">В8</span> – ссылки на
+		ячейки;</p>
+		<p class="p" style="text-indent:10px;"><span class="colortxt">:</span> (двоеточие) и <span class="colortxt">*</span> 
+		(звездочка) – операторы;</p>
+		<p class="p" style="text-indent:10px;"><span class="colortxt">30</span>  – константа.</p>
+		<p class="p">Функции – заранее определенные формулы, которые выполняют вычисления по заданным величинам, называемым 
+		аргументами, и в указанном порядке. Структура функции: имя функции, открывающая скобка, список аргументов, разделенных 
+		точками с запятой, закрывающая скобка. Аргументом функции может быть число, текст, логическое значение, массив, 
+		значение ошибки, ссылка на ячейку. В качестве аргументов используются также константы, формулы, или функции. В каждом 
+		конкретном случае необходимо использовать соответствующий тип аргумента.</p>
+		<p class="p">Ссылка указывает на ячейку или диапазон ячеек листа, которые требуется использовать в формуле. Можно 
+		задавать ссылки на ячейки других листов текущей книги и на другие книги. Ссылки на ячейки других книг называются 
+		связями.</p>
+		<p class="p">Оператором называют знак или символ, задающий тип вычисления в формуле. Существуют математические, 
+		логические операторы, операторы сравнения и ссылок.</p>
+		<p class="p">Константой называют постоянное (не вычисляемое) значение. Формула и результат вычисления формулы 
+		константами не являются.</p>
+	</div>
+	<!--********************************************************************************************************************-->
+	<!-- Операторы -->
+	<div>
+		<h3>Операторы</h3>
+		<h4 class="h4">Арифметические операторы</h4>
+		<p class="p">Арифметические операторы служат для выполнения арифметических операций, таких как сложение, вычитание, 
+		умножение. Операции выполняются над числами. Используются следующие арифметические операторы.</p>
+		<table>
+			<tr style="background-color:#c0c0c0; text-align:center;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Оператор</b></p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Значение</b></p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Пример</b></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">+</span> (знак плюс)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Сложение</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">A1+A2</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">-</span> (знак минус)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Вычитание <br>Отрицание</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">A1-A2 <br>-A1</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">*</span> (звездочка)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Умножение</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">A1*A2</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">/</span> (косая черта)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Деление</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">A1/A2</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">%</span> (знак процента)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Процент</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">50%</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">^</span> (крышка)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Возведение в степень</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">A1^2</span></p></td>
+			</tr>
+		</table>
+	</div>
+	<!--********************************************************************************************************************-->
+	<!-- Операторы сравнения -->
+	<div>
+		<h4>Операторы сравнения</h4>
+		<p class="p">Операторы сравнения используются для сравнения двух значений. Результатом сравнения является логическое 
+		значение: либо <span class="colortxt">ИСТИНА</span>, либо <span class="colortxt">ЛОЖЬ</span>.</p>
+		<table>
+			<tr style="background-color:#c0c0c0; text-align:center;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Оператор</b></p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Значение</b></p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Пример</b></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">=</span> (знак равенства)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Равно</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">(A1=B1)</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">></span> (знак больше)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Больше</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">(A1>B1)</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt"><</span> (знак меньше)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Меньше</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">(A1&ltB1)</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">>=</span> (знак больше и равно)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Больше или равно</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">(A1>=B1)</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt"><=</span> (знак меньше и равно)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Меньше или равно</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">(A1<=B1)</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt"><></span> (знак меньше и больше)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Не равно</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">(A1<>B1)</span></p></td>
+			</tr>
+		</table>
+	</div>
+	<!--********************************************************************************************************************-->
+	<!-- Текстовый оператор конкатенации -->
+	<div>
+		<h4>Текстовый оператор конкатенации</h4>
+		<p class="p">Текстовый оператор амперсанд ( <span class="colortxt">& </span> ) используется для объединения нескольких
+		текстовых значений.</p>
+		<table>
+			<tr style="background-color:#c0c0c0; text-align:center;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Оператор</b></p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Значение</b></p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Пример</b></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">& </span> (амперсанд)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Объединение последовательностей знаков в одну последовательность</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">"Фамилия"&"Имя"&"Отчество"</span></p></td>
+			</tr>
+		</table>
+	</div>
+	<!--********************************************************************************************************************-->
+	<!-- Операторы ссылок -->
+	<div>
+		<h4>Операторы ссылок</h4>
+		<p class="p">Операторы ссылок используют для описания ссылок на диапазоны ячеек.</p>
+		<table>
+			<tr style="background-color:#c0c0c0; text-align:center;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Оператор</b></p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Значение</b></p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><b>Пример</b></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">:</span> (двоеточие)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Ставится между ссылками на первую и последнюю ячейки диапазона</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">B5:B15</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">;</span> (точка с запятой)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Оператор объединения</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">B5:B15;D5:D15</span></p></td>
+			</tr>
+			<tr style="background-color:#dcdcdc;">
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;"><span class="colortxt">&nbsp </span> (пробел)</p></td>
+				<td><p style="font-size:14px; margin:3px 3px 3px 3px;">Оператор пересечения множеств, служит для ссылки на 
+				общие ячейки двух диапазонов</p></td>
+				<td><p style="font-size:14px; text-align:center; margin:3px 3px 3px 3px;"><span class="colortxt">B7:D7 C6:C8</span></p></td>
+			</tr>
+		</table>
+	</div>
+	<!--********************************************************************************************************************-->
+	<!-- Создание и редактирование формул -->
+	<div>
+		<h3>Создание и редактирование формул</h3>
+		<h4 class="h4">Ввод формул с клавиатуры</h4>
+		<p class="p">Формулы можно вводить с использованием клавиатуры и мыши при работе в любой вкладке Excel.</p>
+		<p class="p">С использованием клавиатуры вводят операторы (знаки действий), константы, скобки и, иногда, функции. С 
+		использованием мыши выделяют ячейки и диапазоны ячеек, включаемые в формулу.</p>
+		<ol>
+			<li><p class="p">Выделите ячейку, в которую требуется ввести формулу.</p></li>
+			<li><p class="p">Введите <span class="colortxt">=</span> (знак равенства).</p></li>
+			<li><p class="p">Выделите мышью ячейку, являющуюся аргументом формулы.</p></li>
+			<li><p class="p">Введите знак оператора.</p></li>
+			<li><p class="p">Выделите мышью ячейку, являющуюся вторым аргументом формулы.</p></li>
+			<li><p class="p">При необходимости продолжайте ввод знаков операторов и выделение ячеек.</p></li>
+			<li><p class="p">Подтвердите ввод формулы в ячейку: нажмите клавишу <b>Enter</b> или <b>Tab</b> или кнопку 
+			<b>Ввод</b> (галочка) в строке формул.</p></li>
+		</ol>
+		<p class="p">Например, необходимо создать формулу для расчета стоимости нескольких книг в ячейке 
+		<span class="colortxt">D2</span> таблицы на <a href="#pic1" title="Рис. 6.1.Ввод формулы с клавиатуры">рис. 6.1</a>:</p>
+		<ol>
+			<li><p class="p">выделите ячейку <span class="colortxt">D2</span>,</p></li>
+			<li><p class="p">введите знак <span class="colortxt">=</span>,</p></li>
+			<li><p class="p">щелкните мышью по ячейке <span class="colortxt">В2</span>,</p></li>
+			<li><p class="p">введите знак <span class="colortxt">*</span>,</p></li>
+			<li><p class="p">щелкните мышью по ячейке <span class="colortxt">С2</span>,</p></li>
+			<li><p class="p">нажмите клавишу <b>Enter</b>.</p></li>
+		</ol>
+		<a name="pic1"></a>
+		<img src="pic/1.png" width="700" title="Рис. 6.1.Ввод формулы с клавиатуры">
+		<br>
+		<a class="objectName lightbox-processed" href="pic/1.png" rel="lightbox">увеличить изображение</a>
+		<br><br/>
+		<p class="p"><b>Рис. 6.1.</b> Ввод формулы с клавиатуры</p>
+		<p class="p">При вводе с клавиатуры формула отображается как в строке формул, так и непосредственно в ячейке 
+		(см. <a href="#pic1">рис. 6.1</a>). Ячейки, использованные в формуле, выделены цветной рамкой, а ссылки на эти ячейки в формуле шрифтом 
+		того же цвета.</p>
+	</div>
+	<table>
+		<tr>
+			<td>
+				<a href=""><span style='color:#95B3D7; mso-themecolor:accent1;mso-themetint:153'><< предыдущая лекция</span></a>
+			</td>
+			<td>
+				<p style="margin-left:467px"><a href="2.html"><span style='color:#95B3D7; mso-themecolor:accent1;mso-themetint:153'>следующая страница &gt;&gt;</span></a>
+			</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
