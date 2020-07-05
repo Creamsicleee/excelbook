@@ -1,0 +1,76 @@
+body {
+	background: #f5f5f5;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	
+	font-size: 14px;
+	line-height: 1.5;
+	color: #000000;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.section {
+	margin-bottom: 17px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.section__header {
+    padding: 12px 13px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.style-text {
+	background: #ffffff;       
+    box-shadow: 0 0 0 1px #e5e5e5;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.paper {
+	background: #ffffff;       
+    box-shadow: 0 0 0 1px #e5e5e5;
+    border-radius: 3px;
+}
+
+.lessons-list {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.lessons-item {
+	margin: 10px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    line-height: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.link-default {
+    color: #212529;
+    
+}
+
+.link, .link:hover, a, a:hover {
+    color: #f77519;
+    }
+
+.hr {
+    margin-top: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
