@@ -15,28 +15,14 @@ body {
 }
 
 .container {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 1px 0px 0px 10px;
 }
 
 .section {
-	margin-bottom: 17px;
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
-}
-
-.section__header {
-    padding: 12px 13px;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.style-text {
-	background: #ffffff;       
-    box-shadow: 0 0 0 1px #e5e5e5;
-    border-radius: 3px;
-    padding: 10px;
 }
 
 .paper {
@@ -48,7 +34,6 @@ body {
 .lessons-list {
 	width: 100%;
 	max-width: 1200px;
-	margin: 0 auto;
 }
 
 .lessons-item {
@@ -60,9 +45,15 @@ body {
     border-bottom: 1px solid #e5e5e5;
 }
 
+.style-about-text {
+	background: #ffffff;       
+    box-shadow: 0 0 0 1px #e5e5e5;
+    border-radius: 3px;
+    padding: 10px;
+}
+
 .link-default {
-    color: #212529;
-    
+    color: #212529;    
 }
 
 .link, .link:hover, a, a:hover {
@@ -72,5 +63,5 @@ body {
 .hr {
     margin-top: 1rem;
     border: 0;
-    border-top: 1px solid rgba(0,0,0,.1);
+    border-top: 1px solid #e5e5e5;
 }
