@@ -1,0 +1,96 @@
+
+
+
+
+
+#toTop {
+width:150px;
+border:1px solid #ccc;
+background:#FFD700;
+text-align:center;
+padding:5px;
+position:fixed;
+bottom:10px; /* отступ кнопки от нижнего края страницы*/
+right:10px;
+cursor:pointer;
+display:none;
+color:#333;
+font-family:verdana;
+font-size:11px;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: small;
+}
+h3 {
+    font-size: large;
+    text-align: center;
+}
+h4 {
+    font-size: medium;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+
+}
+div {
+    position: relative;
+    margin: auto;
+    width: 900px;
+
+}
+
+.image {
+    cursor: pointer;
+}
+.popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+}
+.popup_bg {
+    background:rgba(0,0,0,0.4);
+    position: fixed;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+.popup_img {
+    text-align: center;
+    width: 1100px;
+    height: 628px auto;
+    position: relative;
+    z-index: 1;
+}
+.close_popup {
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid #AFAFAF;
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.close_popup i {
+    width: 30px;
+    height: 30px;
+    background: url('../img/ico.png') no-repeat center center;
+    background-size: 16px 16px;
+    display: block;
+}
+
+.pages {
+    text-align: center;
+}
