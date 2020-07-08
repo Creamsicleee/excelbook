@@ -1,0 +1,180 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+	<title>Электронный учебник Microsoft Exel 2019</title>
+	<style>
+
+		td.menu {
+			background-image: url(./2.files/12.png);
+			height: 38px;
+			text-align: right;
+			background-repeat: no-repeat;
+			width: 150
+		}
+
+        table.submenu a {
+            color: greenyellow;
+            font-size: 14px;
+        }
+
+		a {
+			color: greenyellow;
+			font-size: 18px;
+			font-style: italic
+		}
+
+		body {
+			background-color: #30ff30
+		}
+
+		table.submenu { /*border: 1px #440000 solid; background-color: #99ccff*/
+			;
+			width: 205px;
+			visibility: hidden;
+			position: absolute;
+			text-align: left;
+		}
+
+		body {
+			background-image: url(./2.files/base-bg.png);
+			background-repeat: repeat-x
+		}
+		/*table {background-image: url(./2.files/base-bg.gif);background-repeat: repeat-x}*/
+		tr.strm {
+			background-image: url(./2.files/s1.gif);
+			background-repeat: repeat-y;
+			background-color: #66ccff;
+			height: 30px;
+			padding-left: 5px;
+		}
+	</style>
+
+	<script language="JavaScript">
+		var oldId, oldBgColor, oldY, oldYY;
+
+
+		function hiddenLayer(elem) {
+			document.getElementById(elem).style.visibility = 'hidden';
+		}
+
+		function showLayer(elem, element) {
+			oldYY = Number(document.getElementById(element).style.top) + 15;
+			document.getElementById(elem).style.top = oldYY;
+			document.getElementById(elem).style.visibility = 'visible';
+		}
+
+		function lightOn(elem) {
+			oldId = elem;
+			oldBgColor = document.getElementById(elem).style.background;
+			document.getElementById(elem).style.background = '#66ccff';
+			document.getElementById(elem).style.background = 'url(./2.files/s2.jpg)';
+		}
+
+		function lightOff() {
+			document.getElementById(oldId).style.background = '#ccffff';
+			document.getElementById(oldId).style.background = 'url(./2.files/s1.gif)';
+		}
+	</script>
+</head>
+
+
+<body>
+	<font face="Calibri">
+		<DIV style="height:100%; ">
+
+			<table align=right width=100%>
+				<tr style="height:50;text-align:right;color:#000099;font-size:18px">
+					<td>
+						&nbsp;
+						<Div style="position:absolute;left:10px;top:10px"><img src="./2.files/exel.png" alt="MS Exel" border="0"></Div>
+						<Div style="position:absolute;left:70px;top:15px"><i>Microsoft</i></Div>
+						<Div style="position:absolute;left:20px;top:35px;width:150"><i>Exel 2019</i></Div>
+					</td>
+				</tr>
+				<!-- Гланая страница-->
+
+				<tr><td class="menu"><DIV><A class="a" href="2.htm" target=m2><i class="submenu">Главная</i></A></DIV></td></tr>
+
+
+				<!-- Теория-->
+				<tr>
+					<td class="menu">
+						<DIV>
+							<div style="position:absolute;left:0px">
+								<table id="menu0_list" class="submenu" onMouseOver="showLayer('menu0_list','menu0')" onMouseOut="hiddenLayer('menu0_list')" cellpadding="0" cellspacing="0">
+									<tr><td><img src="2.files/v.png" alt="" width="210" height="15" border="0"></td></tr>
+									<tr class="strm" align=left><td id="menu0-0" onMouseOver="lightOn('menu0-0')" onMouseOut="lightOff()"><A href="1_Лекции/Лекция_1.html" target=m2>13. Рецензирование и защита документов</A></td></tr>
+									
+
+									
+									<tr><td><img src="2.files/n.png" alt="" width="210" height="15" border="0"></td></tr>
+								</table>
+							</div>
+							<div id="menu0" class="menu" width="200px" onMouseOver="showLayer('menu0_list','menu0');" onMouseOut="hiddenLayer('menu0_list')" onClick="showLayer('menu0_list','menu0');">
+								<A class="a" href="1_Лекции/Лекция_1.html" target=m2><i class="submenu">Теория</i>
+							</div>
+						</DIV>
+					</td>
+				</tr>
+
+
+
+				<!-- Практика-->
+				<tr>
+					<td class="menu">
+						<DIV>
+							<div style="position:absolute;left:0px">
+								<table id="menu1_list" class="submenu" onMouseOver="showLayer('menu1_list','menu1')" onMouseOut="hiddenLayer('menu1_list')" cellpadding="0" cellspacing="0">
+									<tr><td><img src="2.files/v.png" alt="" width="210" height="15" border="0"></td></tr>
+									<tr class="strm" align=left><td id="menu1-0" onMouseOver="lightOn('menu1-0')" onMouseOut="lightOff()"><A href="2_Практика/Практика_1/Практика1_1.htm" target=m2>Упражнение 13</A></td></tr>
+									
+									<tr><td><img src="2.files/n.png" alt="" width="210" height="15" border="0"></td></tr>
+								</table>
+							</div>
+
+							<div id="menu1" width="200px" onMouseOver="showLayer('menu1_list','menu1');" onMouseOut="hiddenLayer('menu1_list')" onClick="showLayer('menu1_list','menu1');">
+								<A class="a" href="2_Практика/Практика_1/Практика1_1.htm" target=m2><i class="submenu">Практика</i></A>
+							</div>
+						</DIV>
+					</td>
+				</tr>
+				<!-- Тесты-->
+				<tr>
+					<td class="menu">
+						<DIV>
+							<div style="position:absolute;left:0px">
+								<table id="menu3_list" class="submenu" onMouseOver="showLayer('menu3_list','menu2')" onMouseOut="hiddenLayer('menu3_list')" cellpadding="0" cellspacing="0">
+									<tr><td><img src="2.files/v.png" alt="" width="210" height="15" border="0"></td></tr>
+									<tr class="strm" align=left><td id="menu3-0" onMouseOver="lightOn('menu3-0')" onMouseOut="lightOff()"><A href="4_Тесты/test1.html" target=m2>Тест 13</A></td></tr>
+				
+									<tr><td><img src="2.files/n.png" alt="" width="210" height="15" border="0"></td></tr>
+								</table>
+							</div>
+							<div id="menu3" width="200px" onMouseOver="showLayer('menu3_list','menu2');" onMouseOut="hiddenLayer('menu3_list')" onClick="showLayer('menu3_list','menu3');">
+								<A class="a" href="4_Тесты/test1.html" target=m2><i class="submenu">Тесты</i></A>
+							</div>
+						</DIV>
+					</td>
+				</tr>
+
+
+
+
+
+				
+				<tr>
+					<td class="">
+						<DIV>
+							<div style="position:absolute;left:0px">
+								
+							</div>
+							<div id="menu2">
+								
+							</div>
+						</DIV>
+					</td>
+				</tr>
+
+			</table>
+		</DIV>
+</html>
