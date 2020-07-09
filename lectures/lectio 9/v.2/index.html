@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Лекция Excel</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
 </head>
 <body>
@@ -44,32 +45,395 @@
                     </div>
                 </div>
                 </div>
-
+                <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                            <!-- Изображение -->
+                            <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                            <!-- Текстовый контент -->
+                            <div class="card-body">
+                                <h4 class="card-title">Шаг первый</h4>
+                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                <a href="#" class="btn btn-primary">Перейти</a>
+                            </div>
+                        </div><!-- Конец карточки -->
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                            <!-- Текстовый контент -->
+                            <div class="card-body">
+                                <h4 class="card-title">Шаг второй</h4>
+                                <p class="card-text">Щелкните по стрелке списка Числовой формат группы Число вкладки <span class="font-weight-bold">Главная</span> и выберите нужный формат</p>
+                                <a href="#" class="btn btn-primary">Перейти</a>
+                            </div>
+                            <!-- Изображение -->
+                            <img class="card-img-bottom" src="../img/02_2.gif" alt="...">
+                        </div><!-- Конец карточки -->
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                            <!-- Изображение -->
+                            <img class="card-img-top" src="../img/02.gif" alt="...">
+                            <!-- Текстовый контент -->
+                            <div class="card-body">
+                                <h4 class="card-title">Итог</h4>
+                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                <a href="#" class="btn btn-primary">Перейти</a>
+                            </div>
+                        </div><!-- Конец карточки -->
+                    </div>
+                </div>
+                </div>
+                <!--
                 <ol class="list-counter-circle">
                     <li>Выделите ячейку или диапазон ячеек.</li>
                     <li>Щелкните по стрелке списка Числовой формат группы Число вкладки <span class="font-weight-bold">Главная</span> и выберите нужный формат
-                        <button type="button" class="btn btn-success d-table-cell align-middle" data-toggle="modal" data-target="#modal2">
-                            Скрин 9.2
-                        </button>
+                        <button class="btn btn-secondary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Скрин 9.2</button>
                      </li>
                 </ol>
-                Кроме того, в группе Число вкладки <span class="font-weight-bold">Главная</span> расположены кнопки для установки финансового формата, процентного формата, а также для установки разделителя разрядов и управлением количества отображаемых десятичных разрядов <button type="button" class="btn btn-success d-table-cell align-middle" data-toggle="modal" data-target="#modal1">Скрин 9.1</button>.<br>
+                <div class="col-md-8">
+                    <div class="item">
+                        <img class="w-100" src="../img/02.gif" alt="">
+                        <div class="item-caption">
+                            <h3>Нахождение </h3>
+                            <p>Скриншот 9.2
+                            </p>
+                        </div>
+                    </div>
+                </div>-->
+                Кроме того, в группе Число вкладки <span class="font-weight-bold">Главная</span> расположены кнопки для установки финансового формата, процентного формата, а также для установки разделителя разрядов и управлением количества отображаемых десятичных разрядов <button type="button" class="btn btn-success btn-sm d-table-cell align-middle" data-toggle="modal" data-target="#modal1">Скрин 9.1</button>.<br>
 
-                Для перехода к вкладке <span class="font-weight-bold">Число</span> диалогового окна <span class="font-weight-bold">Формат ячеек</span> можно щелкнуть по значку группы Число вкладки <span class="font-weight-bold">Главная</span> <button type="button" class="btn btn-success d-table-cell align-middle" data-toggle="modal" data-target="#modal1">Скрин 9.1</button> или в списке форматов <button type="button" class="btn btn-success d-table-cell align-middle" data-toggle="modal" data-target="#modal2">Скрин 9.2</button> выбрать команду Другие числовые форматы.
+                Для перехода к вкладке <span class="font-weight-bold">Число</span> диалогового окна <span class="font-weight-bold">Формат ячеек</span> можно щелкнуть по значку группы Число вкладки <span class="font-weight-bold">Главная</span> <button type="button" class="btn btn-success btn-sm d-table-cell align-middle" data-toggle="modal" data-target="#modal1">Скрин 9.1</button> или в списке форматов <button type="button" class="btn btn-success btn-sm d-table-cell align-middle" data-toggle="modal" data-target="#modal2">Скрин 9.2</button> выбрать команду <span class="font-italic">Другие числовые форматы</span>.
             </div>
-            <div class="sticker-left sticker-danger text-center" data-sticker="Установка числовых форматов">
 
+            <div class="sticker-left sticker-danger text-center" data-sticker="Общий формат">
+                Общий числовой формат используется по умолчанию. В большинстве случаев числа, имеющие общий формат, отображаются так, как они были введены с клавиатуры.<br/>
+
+                В процессе работы общий числовой формат используют для отказа от других числовых форматов. Для установки общего формата проще всего воспользоваться раскрывающимся списком <span class="font-weight-bold">Числовой формат</span> <button type="button" class="btn btn-success btn-sm d-table-cell align-middle" data-toggle="modal" data-target="#modal2">Скрин 9.2</button>.
             </div>
 
-            <div class="sticker-right sticker-warning text-center" data-sticker="Установка числовых форматов">b</div>
+            <div class="sticker-right sticker-warning text-center" data-sticker="Установка разделителя групп разрядов">
+                Оформление числовых данных с разделителем групп разрядов позволяет отображать в ячейке пробелы между группами разрядов: тысячи, миллионы, миллиарды и т. д.
+                <div class="sticker-left sticker-danger text-center" data-sticker="Инструкция">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг первый</h4>
+                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02_1.gif'>">Скрин</button>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг второй</h4>
+                                    <p class="card-text">Нажмите кнопку Формат с разделителем группы Число вкладки Главная </p>
+                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03_2.gif'>">Скрин</button>
+                                </div>
+                                <!-- Изображение -->
+                                <img class="card-img-bottom" src="../img/03_2.gif" alt="...">
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/03.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Итог</h4>
+                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.3</button>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sticker-left sticker-warning text-left" data-sticker="Форматы отрицательных чисел">
+                Для удобства просмотра данных можно установить отображение отрицательных чисел красным цветом.
+                Знак минус ( <code class="highlighter-rouge">-</code> ) при этом можно отображать или не отображать. На <button class="btn btn-success btn-sm modal-show" data-title="Скрин 1.4" data-content="<img class='img-fluid center-block' src='../img/04.gif'>">Скрин 9.4</button> показано отображение отрицательных чисел в ячейках <code class="highlighter-rouge">D2</code> и <code class="highlighter-rouge">D4</code> красным цветом со знаком минус ( <code class="highlighter-rouge">-</code> ),
+                а в ячейках <code class="highlighter-rouge"> E2</code> и <code class="highlighter-rouge">E4</code> – красным цветом без знака минус.
+                <div class="col-md-8">
+                    <div class="item">
+                        <img class="w-100" src="../img/04.gif" alt="">
+                        <div class="item-caption">
+                            <h3>Установка отрицательного числа</h3>
+                            <p>Скриншот 9.4
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг первый</h4>
+                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02_1.gif'>">Скрин</button>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг второй</h4>
+                                    <p class="card-text">Отобразите вкладку Число диалогового окна Формат ячейки. </p>
+                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03_2.gif'>">Скрин</button>
+                                </div>
+                                <!-- Изображение -->
+                                <img class="card-img-bottom" src="../img/03_2.gif" alt="...">
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/04.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг третий</h4>
+                                    <p class="card-text">В списке Числовые форматы выберите Числовой, в списке Отрицательные числа выберите необходимый формат (см. рис. 9.4)..</p>
+                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.4</button>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/04.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Итог</h4>
+                                    <p class="card-text">В списке Числовые форматы выберите Числовой, в списке Отрицательные числа выберите необходимый формат (см. рис. 9.4)..</p>
+                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.4</button>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <div class="sticker-left sticker-success text-center" data-sticker="Установка числовых форматов"></div>
+            <div class="sticker-left sticker-warning text-center" data-sticker="Форматы дробных чисел">
+                Изменение разрядности десятичных дробей<br/>
+                Изменение разрядности позволяет изменять количество знаков после запятой, отображаемое в ячейке.
+                <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг первый</h4>
+                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                    <a href="#" class="btn btn-primary">Перейти</a>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг второй</h4>
+                                    <p class="card-text">Нажмите кнопку Увеличить разрядность или Уменьшить разрядность группы Число вкладки Главная (рис. 9.5). Одно нажатие соответствующей кнопки увеличивает или уменьшает на один знак количество отображаемых знаков после запятой.</p>
+                                    <a href="#" class="btn btn-primary">Перейти</a>
+                                </div>
+                                <!-- Изображение -->
+                                <img class="card-img-bottom" src="../img/02_2.gif" alt="...">
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/05.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Итог</h4>
+                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                    <a href="#" class="btn btn-primary">Перейти</a>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                    </div>
+                </div>
+                Форматы простых дробей<br/>
+                Microsoft Excel позволяет отображать десятичные дроби в виде простых дробей. Дробный формат округляет десятичную дробь до ближайшей простой дроби в соответствии с выбранным типом. На рис. 9.6 в строках 3:6 показано отображение чисел из строки 2 в различных дробных форматах.
+                <div class="col-md-8">
+                    <div class="item">
+                        <img class="w-100" src="../img/06.gif" alt="">
+                        <div class="item-caption">
+                            <h3>Установка дробного формата</h3>
+                            <p>Скриншот 9.6
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг первый</h4>
+                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02_1.gif'>">Скрин</button>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг второй</h4>
+                                    <p class="card-text">Отобразите вкладку Число диалогового окна Формат ячейки. </p>
+                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03_2.gif'>">Скрин</button>
+                                </div>
+                                <!-- Изображение -->
+                                <img class="card-img-bottom" src="../img/03_2.gif" alt="...">
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/04.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг третий</h4>
+                                    <p class="card-text">В списке Числовые форматы выберите Дробный, в списке Тип выберите необходимый формат (см. рис. 9.6).</p>
+                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.4</button>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/06.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Итог</h4>
+                                    <p class="card-text">В списке Числовые форматы выберите Числовой, в списке Отрицательные числа выберите необходимый формат (см. рис. 9.4)..</p>
+                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/06.gif'>">Скрин 9.4</button>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                    </div>
+                </div>
+                Дробный формат отображает в простых дробях только десятичные дроби. Отображение целых чисел не изменяется.<br>
 
+                Процентный формат
+                Процентный формат позволяет установить обозначение знака процента ( % ) для числа, отображаемого в ячейке. Обычно это используют для представления результатов вычислений.
+                <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг первый</h4>
+                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                    <a href="#" class="btn btn-primary">Перейти</a>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Шаг второй</h4>
+                                    <p class="card-text">Нажмите кнопку Процентный формат группы Число вкладки Главная</p>
+                                    <a href="#" class="btn btn-primary">Перейти</a>
+                                </div>
+                                <!-- Изображение -->
+                                <img class="card-img-bottom" src="../img/02_2.gif" alt="...">
+                            </div><!-- Конец карточки -->
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                <!-- Изображение -->
+                                <img class="card-img-top" src="../img/07.gif" alt="...">
+                                <!-- Текстовый контент -->
+                                <div class="card-body">
+                                    <h4 class="card-title">Итог</h4>
+                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                    <a href="#" class="btn btn-primary">Перейти</a>
+                                </div>
+                            </div><!-- Конец карточки -->
+                        </div>
+                    </div>
+                </div>
+                По умолчанию в процентном формате число отображается без десятичных разрядов. Для установки необходимого количества десятичных разрядов процентного формата можно воспользоваться кнопками Увеличить разрядность или Уменьшить разрядность группы Число вкладки Главная (см. рис. 9.5).<br>
+
+                Для чисел, введенных с клавиатуры, процентный формат изменяет отображение не только в ячейке, но и в строке формул. Например, число 0,4 после применения процентного формата будет отображаться и в ячейке, и в строке формул как 40%. На результатах вычислений это никак не сказывается.
+            </div>
+            <div class="sticker-left sticker-warning text-center" data-sticker="Экспоненциальный формат">
+
+            </div>
+            <div class="sticker-left sticker-warning text-center" data-sticker="Финансовый и денежный формат">
+
+            </div>
+            <div class="sticker-left sticker-success text-center" data-sticker="Формат даты">
+
+            </div>
+            <div class="sticker-left sticker-success text-center" data-sticker="Формат времени">
+
+            </div>
+            <div class="sticker-left sticker-success text-center" data-sticker="Текстовый формат">
+
+            </div>
+            <div class="sticker-left sticker-success text-center" data-sticker="Дополнительные форматы">
+
+            </div>
+            <div class="sticker-left sticker-inverse text-center" data-sticker="Формат времени">
+
+            </div>
+            <div class="sticker-left sticker-inverse text-center" data-sticker="Формат времени">
+
+            </div>
             <div class="sticker-right sticker-inverse text-center" data-sticker="Установка числовых форматов"></div>
 
         </div>
+
     </div>
 </div>
+<script src="JS/jquery-3.5.1.min.js"></script>
+<script src="JS/popper.min.js"></script>
+<script src="JS/bootstrap.min.js"></script>
+
+<script src="JS/control-modal-b4-v.1.1.js"></script>
+<script>
+    $(function () {
+
+        // создаём объект "Модальное окно"
+        var myModal = new ModalApp.ModalProcess({id: 'myModal'});
+        myModal.init();
+
+        $(document).on('click', '.modal-show', function () {
+            myModal.changeTitle($(this).attr('data-title'));
+            myModal.changeBody($(this).attr('data-content'));
+            myModal.showModal();
+        });
+
+        $('#' + myModal.id).on('hidden.bs.modal', function (e) {
+            myModal.changeBody('');
+        });
+
+    });
+</script>
+<!--
 <div class="modal fade" id="modal2">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -96,7 +460,7 @@
                     <h4 class="card-title">Числовой формат</h4>
                     <p class="card-text">Скриншот 9.1</p>
                     <div class="col-md-12">
-                        <img class="w-100" src="../img/02.gif" alt="">
+                        <img class="w-100" src="../img/01.gif" alt="">
                     </div>
                     <a href="#" class="btn btn-success">На вверх</a>
                 </div>
@@ -104,6 +468,7 @@
         </div>
     </div>
 </div>
+-->
 <div  id="lightbox-container" class=" justify-content-center align-items-center">
 
     <div id="lightbox-item" class="d-flex align-items-center justify-content-between">
@@ -114,8 +479,5 @@
     </div>
 </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="JS/script.js"></script>
 </html>
