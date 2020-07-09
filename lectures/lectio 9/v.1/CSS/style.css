@@ -811,23 +811,6 @@ body
     max-width: 1234px;
     width: 1234px;
 }
-#main-wraper
-{
-    display: table;
-    height: 100%;
-    min-width: 990px;
-    width: 100% !important;
-}
-.main-wraper-tr
-{
-    display: table-row;
-    width: 100%;
-}
-.main-wraper-td
-{
-    display: table-cell;
-    width: 100%;
-}
 #header #site-logo
 {
     height: 48px;
@@ -883,10 +866,7 @@ body
     padding-left: 14px !important;
     padding-right: 14px !important;
 }
-#page-content.front-page #main-wraper
-{
-    min-width: 960px !important;
-}
+
 #page-content.front-page #header
 {
     background-color: #FF8800;
@@ -1090,100 +1070,100 @@ body
     vertical-align: middle;
     width: 100px;
 }
-#main-wraper #header-panel
-{
-    clear: both;
-    display: table;
-    padding-bottom: 12px;
-    width: 100%;
+#style-switcher {
+    right: -335px;
+    position: fixed;
+    top: 75px;
+    z-index: 1111;
 }
-#main-wraper #header-panel .row
-{
-    display: table-row;
-}
-#main-wraper #header-panel .breadcrumb
-{
-    display: table-cell;
-    height: 17px;
-    margin: 0px;
+#style-switcher-panel {
+    background-color: #fff;
+    box-shadow: 0 0 10px #4a86b8;
     padding: 0px;
-    padding-left: 9px;
-    padding-top: 10px;
+    position: relative;
+    width: 300px;
+    font-size: 13px;
+    z-index: 1;
+    text-align: left;
 }
-#main-wraper #header-panel .breadcrumb a
-{
-    color: #585858 !important;
-    font-size: 12px;
-    font-weight: normal;
-    text-decoration: underline;
+#style-switcher-panel h3 {
+    padding: 5px;
+    border-bottom: 1px solid #ff9249;
 }
-#main-wraper #panel-container
-{
-    clear: both;
-    height: 100%;
-    width: 100%;
+.item-toc-data {
+    margin: 5px 0;
 }
-#main-wraper .table,.ui-dialog .table
-{
-    display: table;
-    width: 100%;
+#style-switcher-panel .content-toc-container {
+    border: 1px solid white;
+    overflow-y: scroll;
+    max-height: 420px;
 }
-#main-wraper .tr,.ui-dialog .tr
-{
-    display: table-row;
-    width: 100%;
+.internal-page-anchor {
+    cursor: pointer;
+    padding-left: 20px;
+    background: url('../../img/anchor16.png') no-repeat center left;
 }
-#main-wraper .td,.ui-dialog .td
-{
-    display: table-cell;
-    height: 100%;
+.target-blank-url {
+    cursor: pointer;
+    padding-left: 20px;
+    background: url('../../img/newwindow12.png') no-repeat center left;
 }
-#main-wraper #panel-container #left-panel
-{
-    border-right: 1px solid #EBD6A0;
-    padding-left: 0px;
-    vertical-align: top;
-    width: 240px;
+#style-switcher-toggle {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    top: 0;
+    position: absolute;
+    width: 44px;
 }
-#main-wraper .margin-18
-{
-    padding-left: 16px;
+
+#style-switcher-toggle.on {
+    right: 0px;
+    left: auto;
+    width: 48px;
+    height: 48px;
+    background: url('../../img/hide-quick-menu32.png') center no-repeat;
+    box-shadow: none;
 }
-#main-wraper #center-panel
-{
-    vertical-align: top;
-    width: 100%;
+
+#style-switcher-toggle.off {
+    left: -48px;
+    width: 48px;
+    height: 48px;
+    background: url('../../img/show-quick-menu48.png') center no-repeat;
+    box-shadow: none;
 }
-#main-wraper #right-panel
-{
-    border-left: 1px solid #EBD6A0;
-    vertical-align: top;
+#style-switcher-panel {
+    max-height: 500px;
+    background: #fafafa;
+    border: solid 2px #4a86b8;
 }
-#main-wraper #footer-panel
-{
-    clear: both;
-    margin-top: 12px;
-    padding-bottom: 20px;
-    width: 100%;
-}
-#main-wraper #tabs-wrapper
-{
-    margin: 0px;
-    padding: 0px;
-}
-#main-wraper .tabs
-{
-    margin: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-#main-wraper .tabs li a
-{
-    color: #000000;
-}
-#main-wraper .tabs li.active a,#main-wraper .tabs li a:hover
-{
-    background-color: #fdf2bc;
-    background-image: none;
-    color: #000000;
+@media (min-width: 768px) {
+    .navbar-container {
+        position: sticky;
+        top: 0;
+        overflow-y: auto;
+        height: 100vh;
+    }
+
+    .navbar-container .navbar {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .navbar-container .navbar-collapse {
+        align-items: flex-start;
+    }
+
+    .navbar-container .nav {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-container .navbar-nav {
+        flex-direction: column !important;
+    }
 }
