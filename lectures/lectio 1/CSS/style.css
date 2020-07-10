@@ -1,5 +1,20 @@
 
 
+.current a {
+    color: #ffffff;
+    background-color: #FF8C00;
+    font-size: 20pt;
+}
+
+.flex-container {
+    display: flex;
+    list-style: none; 
+    justify-content: center;
+   
+}
+.flex-item {
+padding: 10px 20px;
+}
 
 
 
