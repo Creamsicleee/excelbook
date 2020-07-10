@@ -632,53 +632,58 @@
 
                 Следует отметить, что дальнейшее оформление ячейки не сможет изменить установленный цвет шрифта.<br/>
             </div>
-            <div class="sticker-right sticker-inverse text-center" data-sticker="Условия">
+            <div class="sticker-right sticker-inverse text-left" data-sticker="Условия">
                 Условия используют для установки числовых форматов, применяемых только для чисел, отвечающих заданному условию. Условие должно состоять из оператора сравнения и значения.<br/>
 
                 В качестве операторов сравнения можно использовать знаки:<br/>
                 <div class="container">
                     <div class="row">
-                            <ul class="list-group">
-                                <li class="list-group-item"><i class="fas fa-equals text-danger mx-2"></i></i>Равно</li>
-                                <li class="list-group-item"><i class="fas fa-greater-than text-danger mx-2"></i>больше</li>
-                                <li class="list-group-item"><i class="fas fa-less-than text-danger mx-2"></i>меньше</li>
-                                <li class="list-group-item"><i class="fas fa-greater-than-equal text-danger mx-2"></i>больше или равно</li>
-                                <li class="list-group-item"><i class="fas fa-less-than-equal text-danger mx-2"></i>меньше или равно</li>
-                                <li class="list-group-item"><i class="fas fa-not-equal text-danger mx-2"></i>не равно</li>
-                            </ul>
+                        <div class="col-4">
+                            <div class="list-group" id="list-tab" role="tablist">
+                                <a class="list-group-item list-group-item-action active" id="list-equals-list" data-toggle="list" href="#list-equals" role="tab" aria-controls="equals"><i class="fas fa-equals text-danger mx-2"></i>Равно</a>
+                                <a class="list-group-item list-group-item-action" id="list-greater-than-list" data-toggle="list" href="#list-greater-than" role="tab" aria-controls="greater-than"><i class="fas fa-greater-than text-danger mx-2"></i>больше</a>
+                                <a class="list-group-item list-group-item-action" id="list-less-than-list" data-toggle="list" href="#list-less-than" role="tab" aria-controls="less-than"><i class="fas fa-less-than text-danger mx-2"></i>меньше</a>
+                                <a class="list-group-item list-group-item-action" id="list-greater-than-equal-list" data-toggle="list" href="#list-greater-than-equal" role="tab" aria-controls="greater-than-equal"><i class="fas fa-greater-than-equal text-danger mx-2"></i>больше или равно</a>
+                                <a class="list-group-item list-group-item-action" id="list-less-than-equal-list" data-toggle="list" href="#list-less-than-equal" role="tab" aria-controls="less-than-equal"><i class="fas fa-less-than-equal text-danger mx-2"></i>меньше или равно</a>
+                                <a class="list-group-item list-group-item-action" id="list-not-equal-list" data-toggle="list" href="#list-not-equal" role="tab" aria-controls="not-equal"><i class="fas fa-not-equal text-danger mx-2"></i>не равно</a>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="list-equals" role="tabpanel" aria-labelledby="list-equals-list">Знак: Равно<br> Символ знака: <i class="fas fa-equals text-danger mx-2"></i><br> Обозначение знака в Excel: = </div>
+                                <div class="tab-pane fade" id="list-greater-than" role="tabpanel" aria-labelledby="list-greater-than-list">Знак: Больше<br> Символ знака: <i class="fas fa-greater-than text-danger mx-2"></i><br> Обозначение знака в Excel: ></div>
+                                <div class="tab-pane fade" id="list-less-than" role="tabpanel" aria-labelledby="list-less-than-list">Знак: Меньше<br> Символ знака: <i class="fas fa-less-than text-danger mx-2"></i><br>Обозначение знака в Excel: <</div>
+                                <div class="tab-pane fade" id="list-greater-than-equal" role="tabpanel" aria-labelledby="list-greater-than-equal-list">Знак: Больше или равно<br> Символ знака: <i class="fas fa-greater-than-equal text-danger mx-2"></i><br>Обозначение знакак в Excel: >=</div>
+                                <div class="tab-pane fade" id="list-less-than-equal" role="tabpanel" aria-labelledby="list-less-than-equal-list">Знак: Меньше или равно<br> Символ знака: <i class="fas fa-less-than-equal text-danger mx-2"></i><br>Обозначение знакак в Excel: <=</div>
+                                <div class="tab-pane fade" id="list-not-equal" role="tabpanel" aria-labelledby="list-greater-than-equal-list">Знак: Не равно<br> Символ знака: <i class="fas fa-not-equal text-danger mx-2"></i><br>Обозначение знакак в Excel: <></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
 
-                = (равно),<br/>
-                > (больше),<br/>
-                < (меньше),<br/>
-                >= (больше или равно),<br/>
-                <= (меньше или равно),<br/>
-                <> (не равно).<br/>
-
                 Значение условия задается числом. Оператор сравнения и значение указываются в квадратных скобках. Например, формат<br/>
 
-                [Синий][<=36,6]Основной;[Красный][>36,6]Основной устанавливает отображение чисел меньших или равных 36,6 синим шрифтом, а чисел более 36,6 – красным шрифтом.<br/>
+                <code class="highlighter-rouge">[Синий][<=36,6]Основной;[Красный][>36,6]Основной</code> устанавливает отображение чисел меньших или равных <code class="highlighter-rouge">36,6</code> синим шрифтом, а чисел более <code class="highlighter-rouge">36,6</code> – красным шрифтом.<br/>
             </div>
-            <div class="sticker-right sticker-inverse text-center" data-sticker="Текст">
-                Текст, отображаемый в ячейке вместе с числом, должен быть заключен в кавычки ( " " ). Для отображения одиночного символа можно поставить перед ним обратную косую черту ( \ ).<br/>
+            <div class="sticker-right sticker-inverse text-left" data-sticker="Текст">
+                Текст, отображаемый в ячейке вместе с числом, должен быть заключен в кавычки ( <code class="highlighter-rouge">" "</code> ). Для отображения одиночного символа можно поставить перед ним обратную косую черту ( <code class="highlighter-rouge">\</code> ).<br/>
 
-                Чтобы задать пробел между числом и текстом, в код формата необходимо включить знак подчеркивания ( _ ) и пробел или два знака подчеркивания.<br/>
+                Чтобы задать пробел между числом и текстом, в код формата необходимо включить знак подчеркивания ( <code class="highlighter-rouge">_</code> ) и пробел или два знака подчеркивания.<br/>
 
                 Текст может располагаться и перед числом и после числа, а также одновременно перед числом и после числа.<br/>
 
                 Можно добавлять различный текст для различных разделов формата. Например, формат<br/>
 
-                0,00_ "Прибыль";0,00_ "Убыток";0,00;Основной<br/>
+                <code class="highlighter-rouge">0,00_ "Прибыль";0,00_ "Убыток";0,00;Основной</code><br/>
 
-                устанавливает отображение положительных чисел с текстом Прибыль, отрицательных – с текстом Убыток, а нулевых значений без текста.<br/>
+                устанавливает отображение положительных чисел с текстом <code class="highlighter-rouge">Прибыль</code>, отрицательных – с текстом <code class="highlighter-rouge">Убыток</code>, а нулевых значений без текста.<br/>
 
                 Текст можно добавлять и в форматы с условиями. Например, формат<br/>
 
-                [<=36,6]0,0"_ Нормальная";[>36,6]0,0"_ Повышенная"<br/>
+                <code class="highlighter-rouge">[<=36,6]0,0"_ Нормальная";[>36,6]0,0"_ Повышенная"</code><br/>
 
-                устанавливает отображение чисел меньших или равных 36,6 с текстом Нормальная, а чисел более 36,6 – с текстом Повышенная.<br/>
+                устанавливает отображение чисел меньших или равных <code class="highlighter-rouge">36,6</code> с текстом <code class="highlighter-rouge">Нормальная</code>, а чисел более <code class="highlighter-rouge">36,6</code> – с текстом <code class="highlighter-rouge">Повышенная</code>.<br/>
             </div>
             <div class="sticker-right sticker-inverse text-center" data-sticker="Текстовый раздел">
                 Текстовый раздел позволяет отображать в ячейке постоянный текст вместе с текстом, вводимым с клавиатуры. Текстовый раздел включает собственно текст и знак @, установленный перед текстом или после текста. Текст должен быть заключен в кавычки (" "). Между символами текста можно использовать пробелы, ставить знаки препинания, скобки и т. д.<br/>
