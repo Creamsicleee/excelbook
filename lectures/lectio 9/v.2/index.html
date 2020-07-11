@@ -8,754 +8,1083 @@
   <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <link rel="stylesheet" type="text/css" href="CSS/all.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/sidebar-themes.css">
+    <link rel="stylesheet" type="text/css" href="CSS/sidebar.css">
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 col-md-offset-2">
+<div class="page-wrapper default-theme sidebar-bg bg1 toggled">
+    <button id="show-sidebar" class="btn btn-sm btn-dark sticky-top">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav id="sidebar" class="sidebar-wrapper">
+        <div class="sidebar-content">
+            <!-- sidebar-brand  -->
+            <div class="sidebar-item sidebar-brand">
+                <a href="#">Лекция №9</a>
+                <div id="close-sidebar">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <!-- sidebar-header  -->
+            <div class="sidebar-item sidebar-header d-flex flex-nowrap">
+                <div class="user-pic">
+                    <img class="img-responsive img-rounded" src="../img/kuzstu-logo2.png" alt="KuzSTU">
+                </div>
+                <div class="user-info">
+                        <span class="user-name">Название
+                            <strong>темы</strong>
+                        </span>
+                    <span class="user-role">Форматирование</span>
+                    <span class="user-status">
+                            <span>Данных</span>
+                        </span>
+                </div>
+            </div>
+            <!-- sidebar-search
+            <div class="sidebar-item sidebar-search">
+                <div>
+                    <div class="input-group">
+                        <input type="text" class="form-control search-menu" placeholder="Search...">
+                        <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- sidebar-menu  -->
+            <div class=" sidebar-item sidebar-menu">
+                <ul>
+                    <li class="header-menu">
+                        <span>Содержание</span>
+                    </li>
+                    <li class="sidebar-dropdown">
+                        <a href="#">
+                            <i class="fa fa-tachometer-alt"></i>
+                            <span class="menu-text">Общее</span>
+                            <span class="badge badge-pill badge-warning">Главная</span>
+                        </a>
+                        <div class="sidebar-submenu">
+                            <ul>
+                                <li>
+                                    <a href="#">Название лекции
+                                       <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">Аннотация</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="sidebar-dropdown">
+                        <a href="#">
+                            <i class="fa fa-calculator"></i>
+                            <span class="menu-text">Числовой формат</span>
+                            <!--  <span class="badge badge-pill badge-danger">3</span> -->
+                         </a>
+                         <div class="sidebar-submenu">
+                             <ul>
+                                 <li>
+                                     <a href="#">Установка числовых форматов
 
-            <div class="sticker-left" data-sticker="Лекция №9"><div class="text-center lec"><h1 class="text-center">Форматирование данных</h1></div></div>
+                                     </a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Общий формат</a>
+                                 </li>
+                             </ul>
+                         </div>
+                     </li>
+                     <li class="sidebar-dropdown">
+                         <a href="#">
+                             <i class="far fa-gem"></i>
+                             <span class="menu-text">Форматирование чисел</span>
+                         </a>
+                         <div class="sidebar-submenu">
+                             <ul>
+                                 <li>
+                                     <a href="#">Установка разделителя групп разрядов</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Форматы отрицательных чисел</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Форматы дробных чисел</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Экспоненциальный формат</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Финансовый и денежный формат</a>
+                                 </li>
+                             </ul>
+                         </div>
+                     </li>
+                     <li class="sidebar-dropdown">
+                         <a href="#">
+                             <i class="fa fa-clock"></i>
+                             <span class="menu-text">Форматир. дат и времени</span>
+                         </a>
+                         <div class="sidebar-submenu">
+                             <ul>
+                                 <li>
+                                     <a href="#">Формат даты</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Формат времени</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Текстовый формат</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Дополнительные форматы</a>
+                                 </li>
+                             </ul>
+                         </div>
+                     </li>
+                     <li class="sidebar-dropdown">
+                         <a href="#">
+                             <i class="fa fa-globe"></i>
+                             <span class="menu-text">Личный числовой формат</span>
+                         </a>
+                         <div class="sidebar-submenu">
+                             <ul>
+                                 <li>
+                                     <a href="#">О личных форматах</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Общие правила</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Структура числового формата</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Отображение чисел</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Отображение дат и времени</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Цвет шрифта</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Условия</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Удаление личного формата</a>
+                                 </li>
+                             </ul>
+                         </div>
+                     </li>
+                     <li class="header-menu">
+                         <span>Дополнительно</span>
+                     </li>
+                     <li>
+                         <a href="#">
+                             <i class="fa fa-book"></i>
+                             <span class="menu-text">Помошь</span>
+                             <span class="badge badge-pill badge-primary">Beta</span>
+                         </a>
+                     </li>
 
-            <div class="sticker-right sticker-info" data-sticker="Аннотация">
+                 </ul>
+             </div>
+             <!-- sidebar-menu  -->
+        </div>
+        <!-- sidebar-footer  -->
+        <div class="sidebar-footer">
+            <div class="dropdown">
+
+                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-atlas"></i>
+                    <span class="badge badge-pill badge-warning notification">3</span>
+                </a>
+                <div class="dropdown-menu notifications" aria-labelledby="dropdownMenuMessage">
+                    <div class="notifications-header">
+                        <i class="fa fa-atlas"></i>
+                        Навигация
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">
+                        <div class="notification-content">
+                            <div class="icon">
+                                <i class="fas fa-check text-success border border-success"></i>
+                            </div>
+                            <div class="content">
+                                <div class="notification-detail">Главное меню</div>
+                                <div class="notification-time">
+                                    Там, где хронятся все лекции
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <div class="notification-content">
+                            <div class="icon">
+                                <i class="fas fa-greater-than text-info border border-info"></i>
+                            </div>
+                            <div class="content">
+                                <div class="notification-detail">Следующая лекция</div>
+                                <div class="notification-time">
+                                    Форматирование ячеек
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="dropdown-item" href="#">
+                        <div class="notification-content">
+                            <div class="icon">
+                                <i class="fas fa-less-than text-warning border border-warning"></i>
+                            </div>
+                            <div class="content">
+                                <div class="notification-detail">Предыдущая лекция</div>
+                                <div class="notification-time">
+                                    Форматирование данных
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-center" href="#">Каталог всех лекций</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-cog"></i>
+                    <span class="badge-sonar"></span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuMessage">
+                    <button class="dropdown-item" id="pin-sidebar">Упрощенный стиль</button>
+                    <a class="dropdown-item" href="#">Помощь</a>
+
+                        <button class="dropdown-item" data-toggle="modal" data-target="#Settings">Настройки меню</button>
+                </div>
+            </div>
+            <div>
+                <a href="#">
+                    <i class="fa fa-power-off"></i>
+                </a>
+            </div>
+            <div class="pinned-footer">
+                <a href="#">
+                    <i class="fas fa-ellipsis-h"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- page-content  -->
+    <main class="page-content pt-2">
+        <div id="overlay" class="overlay"></div>
+        <div class="container-fluid p-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-2">
+
+                        <div class="sticker-left" data-sticker="Лекция №9"><div class="text-center lec"><h1 class="text-center">Форматирование данных</h1></div></div>
+
+                        <div class="sticker-right sticker-info" data-sticker="Аннотация">
 <pre>
     <code>Лекция посвящена вопросам оформления числовых данных. Дано понятие числового формата.Приведены примеры использования различных<br>форматов для числовых данных, дат и времени.Показано использование денежного и финансового формата. Рассмотрены форматы дробных чисел.<br>Дано представление о личных числовых форматах. Показана структура числового формата. Представлена процедура создания и настройки<br>личного числового формата. Показаны возможности установки и использования условий при применении личных форматов. Отмечены особенности<br>личных форматов чисел, дат и времени. Показана возможность добавления текста, отображаемого в ячейке вместе с числом или вводимым с<br>клавиатуры текстом. Приведена процедура удаления личного формата
     </code>
 </pre>
-            </div>
+                        </div>
 
-            <div class="sticker-left sticker-danger text-left" data-sticker="Установка числовых форматов">
-                 Под числами в Microsoft Excel понимаются собственно числа, включая числа с десятичными и/или простыми дробями и числа с указанием символа процентов, а также даты и время.<br/>
+                        <div class="sticker-left sticker-danger text-left" data-sticker="Установка числовых форматов">
+                            Под числами в Microsoft Excel понимаются собственно числа, включая числа с десятичными и/или простыми дробями и числа с указанием символа процентов, а также даты и время.<br/>
 
-                Форматирование чисел используется для более удобного представления данных на листе.<br>
+                            Форматирование чисел используется для более удобного представления данных на листе.<br>
 
-                Устанавливать числовые форматы можно как для чисел, введенных с клавиатуры или импортированных, так и для результатов вычислений. Значение введенного или импортированного числа или результата вычислений при установке формата не изменяется. Установленный числовой формат сохраняется после очистки содержимого ячейки, изменения формулы, обновления импортированных связанных данных.<br>
+                            Устанавливать числовые форматы можно как для чисел, введенных с клавиатуры или импортированных, так и для результатов вычислений. Значение введенного или импортированного числа или результата вычислений при установке формата не изменяется. Установленный числовой формат сохраняется после очистки содержимого ячейки, изменения формулы, обновления импортированных связанных данных.<br>
 
-                При установке формата отображение введенного числа в строке формул и в ячейке может отличаться. Но именно значение числа, отображаемое в строке формул, будет использоваться при вычислениях, сортировках и т. д.<br>
+                            При установке формата отображение введенного числа в строке формул и в ячейке может отличаться. Но именно значение числа, отображаемое в строке формул, будет использоваться при вычислениях, сортировках и т. д.<br>
 
-                Точно так же как отформатированное число отображается на листе, оно будет и напечатано.<br>
+                            Точно так же как отформатированное число отображается на листе, оно будет и напечатано.<br>
 
-                Для установки числовых форматов используют элементы группы  вкладки <span class="font-weight-bold">Главная</span>, а также вкладку <span class="font-weight-bold">Число</span> диалогового окна <span class="font-weight-bold">Формат ячеек</span><br>
-                Основные числовые форматы можно выбрать в раскрывающемся списке <span class="font-weight-bold">Числовой формат.</span><br>
-                <div class="col-md-8">
-                <div class="item">
-                    <img class="w-100" src="../img/01.gif" alt="">
-                    <div class="item-caption">
-                        <h3>Нахождение числового формата</h3>
-                        <p>Скриншот 9.1
-                        </p>
-                    </div>
-                </div>
-                </div>
-                <div class="sticker-center sticker-danger text-center" data-sticker="Инструкция">
-                <div class="row align-items-center">
-                    <div class="col-sm-4">
-                        <div class="card mx-auto mb-3" style="max-width: 300px;">
-                            <!-- Изображение -->
-                            <img class="card-img-top" src="../img/02_1.gif" alt="...">
-                            <!-- Текстовый контент -->
-                            <div class="card-body">
-                                <h4 class="card-title">Шаг первый</h4>
-                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
-                                <a href="#" class="btn btn-primary">Перейти</a>
+                            Для установки числовых форматов используют элементы группы  вкладки <span class="font-weight-bold">Главная</span>, а также вкладку <span class="font-weight-bold">Число</span> диалогового окна <span class="font-weight-bold">Формат ячеек</span><br>
+                            Основные числовые форматы можно выбрать в раскрывающемся списке <span class="font-weight-bold">Числовой формат.</span><br>
+                            <div class="col-md-8">
+                                <div class="item">
+                                    <img class="w-100" src="../img/01.gif" alt="">
+                                    <div class="item-caption">
+                                        <h3>Нахождение числового формата</h3>
+                                        <p>Скриншот 9.1
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div><!-- Конец карточки -->
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card mx-auto mb-3" style="max-width: 300px;">
-                            <!-- Текстовый контент -->
-                            <div class="card-body">
-                                <h4 class="card-title">Шаг второй</h4>
-                                <p class="card-text">Щелкните по стрелке списка Числовой формат группы Число вкладки <span class="font-weight-bold">Главная</span> и выберите нужный формат</p>
-                                <a href="#" class="btn btn-primary">Перейти</a>
+                            <div class="sticker-center sticker-danger text-center" data-sticker="Инструкция">
+                                <div class="row align-items-center">
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг первый</h4>
+                                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                                <a href="#" class="btn btn-primary">Перейти</a>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг второй</h4>
+                                                <p class="card-text">Щелкните по стрелке списка Числовой формат группы Число вкладки <span class="font-weight-bold">Главная</span> и выберите нужный формат</p>
+                                                <a href="#" class="btn btn-primary">Перейти</a>
+                                            </div>
+                                            <!-- Изображение -->
+                                            <img class="card-img-bottom" src="../img/02_2.gif" alt="...">
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/02.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Итог</h4>
+                                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                                <a href="#" class="btn btn-primary">Перейти</a>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                </div>
                             </div>
-                            <!-- Изображение -->
-                            <img class="card-img-bottom" src="../img/02_2.gif" alt="...">
-                        </div><!-- Конец карточки -->
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card mx-auto mb-3" style="max-width: 300px;">
-                            <!-- Изображение -->
-                            <img class="card-img-top" src="../img/02.gif" alt="...">
-                            <!-- Текстовый контент -->
-                            <div class="card-body">
-                                <h4 class="card-title">Итог</h4>
-                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
-                                <a href="#" class="btn btn-primary">Перейти</a>
-                            </div>
-                        </div><!-- Конец карточки -->
-                    </div>
-                </div>
-                </div>
-                <!--
-                <ol class="list-counter-circle">
-                    <li>Выделите ячейку или диапазон ячеек.</li>
-                    <li>Щелкните по стрелке списка Числовой формат группы Число вкладки <span class="font-weight-bold">Главная</span> и выберите нужный формат
-                        <button class="btn btn-secondary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Скрин 9.2</button>
-                     </li>
-                </ol>
-                <div class="col-md-8">
-                    <div class="item">
-                        <img class="w-100" src="../img/02.gif" alt="">
-                        <div class="item-caption">
-                            <h3>Нахождение </h3>
-                            <p>Скриншот 9.2
-                            </p>
-                        </div>
-                    </div>
-                </div>-->
-                Кроме того, в группе Число вкладки <span class="font-weight-bold">Главная</span> расположены кнопки для установки финансового формата, процентного формата, а также для установки разделителя разрядов и управлением количества отображаемых десятичных разрядов <button class="badge badge-primary modal-show" data-title="Рисунок 9.1" data-content="<img class='img-fluid center-block' src='../img/01.gif'>">Рис. 9.1</button>.<br>
-
-                Для перехода к вкладке <span class="font-weight-bold">Число</span> диалогового окна <span class="font-weight-bold">Формат ячеек</span> можно щелкнуть по значку группы Число вкладки <span class="font-weight-bold">Главная</span>  <button class="badge badge-primary modal-show" data-title="Рисунок 9.1" data-content="<img class='img-fluid center-block' src='../img/01.gif'>">Рис. 9.1</button> или в списке форматов <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button> выбрать команду <span class="font-italic">Другие числовые форматы</span>.
-            </div>
-
-            <div class="sticker-left sticker-danger text-center" data-sticker="Общий формат">
-                Общий числовой формат используется по умолчанию. В большинстве случаев числа, имеющие общий формат, отображаются так, как они были введены с клавиатуры.<br/>
-
-                В процессе работы общий числовой формат используют для отказа от других числовых форматов. Для установки общего формата проще всего воспользоваться раскрывающимся списком <span class="font-weight-bold">Числовой формат</span> <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.
-            </div>
-
-            <div class="sticker-right sticker-warning text-center" data-sticker="Установка разделителя групп разрядов">
-                Оформление числовых данных с разделителем групп разрядов позволяет отображать в ячейке пробелы между группами разрядов: тысячи, миллионы, миллиарды и т. д.
-                <div class="sticker-left sticker-danger text-center" data-sticker="Инструкция">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/02_1.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг первый</h4>
-                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
-                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02_1.gif'>">Скрин</button>
+                            <!--
+                            <ol class="list-counter-circle">
+                                <li>Выделите ячейку или диапазон ячеек.</li>
+                                <li>Щелкните по стрелке списка Числовой формат группы Число вкладки <span class="font-weight-bold">Главная</span> и выберите нужный формат
+                                    <button class="btn btn-secondary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Скрин 9.2</button>
+                                 </li>
+                            </ol>
+                            <div class="col-md-8">
+                                <div class="item">
+                                    <img class="w-100" src="../img/02.gif" alt="">
+                                    <div class="item-caption">
+                                        <h3>Нахождение </h3>
+                                        <p>Скриншот 9.2
+                                        </p>
+                                    </div>
                                 </div>
-                            </div><!-- Конец карточки -->
+                            </div>-->
+                            Кроме того, в группе Число вкладки <span class="font-weight-bold">Главная</span> расположены кнопки для установки финансового формата, процентного формата, а также для установки разделителя разрядов и управлением количества отображаемых десятичных разрядов <button class="badge badge-primary modal-show" data-title="Рисунок 9.1" data-content="<img class='img-fluid center-block' src='../img/01.gif'>">Рис. 9.1</button>.<br>
+
+                            Для перехода к вкладке <span class="font-weight-bold">Число</span> диалогового окна <span class="font-weight-bold">Формат ячеек</span> можно щелкнуть по значку группы Число вкладки <span class="font-weight-bold">Главная</span>  <button class="badge badge-primary modal-show" data-title="Рисунок 9.1" data-content="<img class='img-fluid center-block' src='../img/01.gif'>">Рис. 9.1</button> или в списке форматов <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button> выбрать команду <span class="font-italic">Другие числовые форматы</span>.
                         </div>
-                        <div class="col-sm-4">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг второй</h4>
-                                    <p class="card-text">Нажмите кнопку Формат с разделителем группы Число вкладки Главная </p>
-                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03_2.gif'>">Скрин</button>
+
+                        <div class="sticker-left sticker-danger text-center" data-sticker="Общий формат">
+                            Общий числовой формат используется по умолчанию. В большинстве случаев числа, имеющие общий формат, отображаются так, как они были введены с клавиатуры.<br/>
+
+                            В процессе работы общий числовой формат используют для отказа от других числовых форматов. Для установки общего формата проще всего воспользоваться раскрывающимся списком <span class="font-weight-bold">Числовой формат</span> <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.
+                        </div>
+
+                        <div class="sticker-right sticker-warning text-center" data-sticker="Установка разделителя групп разрядов">
+                            Оформление числовых данных с разделителем групп разрядов позволяет отображать в ячейке пробелы между группами разрядов: тысячи, миллионы, миллиарды и т. д.
+                            <div class="sticker-left sticker-danger text-center" data-sticker="Инструкция">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг первый</h4>
+                                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                                <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02_1.gif'>">Скрин</button>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг второй</h4>
+                                                <p class="card-text">Нажмите кнопку Формат с разделителем группы Число вкладки Главная </p>
+                                                <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03_2.gif'>">Скрин</button>
+                                            </div>
+                                            <!-- Изображение -->
+                                            <img class="card-img-bottom" src="../img/03_2.gif" alt="...">
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/03.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Итог</h4>
+                                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                                <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.3</button>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
                                 </div>
-                                <!-- Изображение -->
-                                <img class="card-img-bottom" src="../img/03_2.gif" alt="...">
-                            </div><!-- Конец карточки -->
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/03.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Итог</h4>
-                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
-                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.3</button>
-                                </div>
-                            </div><!-- Конец карточки -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sticker-left sticker-warning text-left" data-sticker="Форматы отрицательных чисел">
-                Для удобства просмотра данных можно установить отображение отрицательных чисел красным цветом.
-                Знак минус ( <code class="highlighter-rouge">-</code> ) при этом можно отображать или не отображать. На <button class="badge badge-primary modal-show" data-title="Рисунок 9.4" data-content="<img class='img-fluid center-block' src='../img/04.gif'>">Рис. 9.4</button> показано отображение отрицательных чисел в ячейках <code class="highlighter-rouge">D2</code> и <code class="highlighter-rouge">D4</code> красным цветом со знаком минус ( <code class="highlighter-rouge">-</code> ),
-                а в ячейках <code class="highlighter-rouge"> E2</code> и <code class="highlighter-rouge">E4</code> – красным цветом без знака минус.
-                <div class="col-md-8">
-                    <div class="item">
-                        <img class="w-100" src="../img/04.gif" alt="">
-                        <div class="item-caption">
-                            <h3>Установка отрицательного числа</h3>
-                            <p>Скриншот 9.4
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/02_1.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг первый</h4>
-                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
-                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02_1.gif'>">Скрин</button>
-                                </div>
-                            </div><!-- Конец карточки -->
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг второй</h4>
-                                    <p class="card-text">Отобразите вкладку Число диалогового окна Формат ячейки. </p>
-                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03_2.gif'>">Скрин</button>
-                                </div>
-                                <!-- Изображение -->
-                                <img class="card-img-bottom" src="../img/03_2.gif" alt="...">
-                            </div><!-- Конец карточки -->
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/04.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг третий</h4>
-                                    <p class="card-text">В списке Числовые форматы выберите Числовой, в списке Отрицательные числа выберите необходимый формат (см. рис. 9.4)..</p>
-                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.4</button>
-                                </div>
-                            </div><!-- Конец карточки -->
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/04.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Итог</h4>
-                                    <p class="card-text">В списке Числовые форматы выберите Числовой, в списке Отрицательные числа выберите необходимый формат (см. рис. 9.4)..</p>
-                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.4</button>
-                                </div>
-                            </div><!-- Конец карточки -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sticker-left sticker-warning text-center" data-sticker="Форматы дробных чисел">
-                Изменение разрядности десятичных дробей<br/>
-                Изменение разрядности позволяет изменять количество знаков после запятой, отображаемое в ячейке.
-                <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/02_1.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг первый</h4>
-                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
-                                    <a href="#" class="btn btn-primary">Перейти</a>
-                                </div>
-                            </div><!-- Конец карточки -->
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг второй</h4>
-                                    <p class="card-text">Нажмите кнопку Увеличить разрядность или Уменьшить разрядность группы Число вкладки Главная (рис. 9.5). Одно нажатие соответствующей кнопки увеличивает или уменьшает на один знак количество отображаемых знаков после запятой.</p>
-                                    <a href="#" class="btn btn-primary">Перейти</a>
-                                </div>
-                                <!-- Изображение -->
-                                <img class="card-img-bottom" src="../img/02_2.gif" alt="...">
-                            </div><!-- Конец карточки -->
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/05.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Итог</h4>
-                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
-                                    <a href="#" class="btn btn-primary">Перейти</a>
-                                </div>
-                            </div><!-- Конец карточки -->
-                        </div>
-                    </div>
-                </div>
-                Форматы простых дробей<br/>
-                Microsoft Excel позволяет отображать десятичные дроби в виде простых дробей. Дробный формат округляет десятичную дробь до ближайшей простой дроби в соответствии с выбранным типом. На <button class="badge badge-primary modal-show" data-title="Рисунок 9.6" data-content="<img class='img-fluid center-block' src='../img/06.gif'>">Рис. 9.6</button> в строках 3:6 показано отображение чисел из строки 2 в различных дробных форматах.
-                <div class="col-md-8">
-                    <div class="item">
-                        <img class="w-100" src="../img/06.gif" alt="">
-                        <div class="item-caption">
-                            <h3>Установка дробного формата</h3>
-                            <p>Скриншот 9.6
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/02_1.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг первый</h4>
-                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
-                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02_1.gif'>">Скрин</button>
-                                </div>
-                            </div><!-- Конец карточки -->
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг второй</h4>
-                                    <p class="card-text">Отобразите вкладку Число диалогового окна Формат ячейки. </p>
-                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03_2.gif'>">Скрин</button>
-                                </div>
-                                <!-- Изображение -->
-                                <img class="card-img-bottom" src="../img/03_2.gif" alt="...">
-                            </div><!-- Конец карточки -->
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/04.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг третий</h4>
-                                    <p class="card-text">В списке Числовые форматы выберите Дробный, в списке Тип выберите необходимый формат (см. рис. 9.6).</p>
-                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.4</button>
-                                </div>
-                            </div><!-- Конец карточки -->
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/06.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Итог</h4>
-                                    <p class="card-text">В списке Числовые форматы выберите Числовой, в списке Отрицательные числа выберите необходимый формат (см. рис. 9.4)..</p>
-                                    <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/06.gif'>">Скрин 9.4</button>
-                                </div>
-                            </div><!-- Конец карточки -->
-                        </div>
-                    </div>
-                </div>
-                Дробный формат отображает в простых дробях только десятичные дроби. Отображение целых чисел не изменяется.<br>
-
-                Процентный формат
-                Процентный формат позволяет установить обозначение знака процента ( % ) для числа, отображаемого в ячейке. Обычно это используют для представления результатов вычислений.
-                <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/02_1.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг первый</h4>
-                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
-                                    <a href="#" class="btn btn-primary">Перейти</a>
-                                </div>
-                            </div><!-- Конец карточки -->
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Шаг второй</h4>
-                                    <p class="card-text">Нажмите кнопку Процентный формат группы Число вкладки Главная</p>
-                                    <a href="#" class="btn btn-primary">Перейти</a>
-                                </div>
-                                <!-- Изображение -->
-                                <img class="card-img-bottom" src="../img/02_2.gif" alt="...">
-                            </div><!-- Конец карточки -->
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="card mx-auto mb-3" style="max-width: 300px;">
-                                <!-- Изображение -->
-                                <img class="card-img-top" src="../img/07.gif" alt="...">
-                                <!-- Текстовый контент -->
-                                <div class="card-body">
-                                    <h4 class="card-title">Итог</h4>
-                                    <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
-                                    <a href="#" class="btn btn-primary">Перейти</a>
-                                </div>
-                            </div><!-- Конец карточки -->
-                        </div>
-                    </div>
-                </div>
-                По умолчанию в процентном формате число отображается без десятичных разрядов. Для установки необходимого количества десятичных разрядов процентного формата можно воспользоваться кнопками Увеличить разрядность или Уменьшить разрядность группы Число вкладки Главная <button class="badge badge-primary modal-show" data-title="Рисунок 9.5" data-content="<img class='img-fluid center-block' src='../img/05.gif'>">Рис. 9.5</button>.<br>
-
-                Для чисел, введенных с клавиатуры, процентный формат изменяет отображение не только в ячейке, но и в строке формул. Например, число 0,4 после применения процентного формата будет отображаться и в ячейке, и в строке формул как 40%. На результатах вычислений это никак не сказывается.
-            </div>
-            <div class="sticker-left sticker-warning text-center" data-sticker="Экспоненциальный формат">
-                Экспоненциальный формат используется для отображения очень больших или очень маленьких чисел в экспоненциальной записи.<br/>
-
-                Например, масса планеты Земля ( 5980000000000000000000000 кг) будет отображена как 5,98E+24, что означает 5,98 умноженное на 1024 (десять в двадцать четвертой степени), а масса атома водорода ( 0,000000000000000000000000001673 кг) будет отображена как 1,673E-27, что означает 1,673 умноженное на 10-27 (десять в минус двадцать седьмой степени) <button class="badge badge-primary modal-show" data-title="Рисунок 9.8" data-content="<img class='img-fluid center-block' src='../img/08.gif'>">Рис. 9.8</button>. Для установки экспоненциального формата проще всего воспользоваться раскрывающимся списком Числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.<br/>
-            </div>
-            <div class="sticker-left sticker-warning text-center" data-sticker="Финансовый и денежный формат">
-                Установка финансового или денежного формата позволяет отображать в ячейке число с указанием денежной единицы. На <button class="badge badge-primary modal-show" data-title="Рисунок 9.9" data-content="<img class='img-fluid center-block' src='../img/09.gif'>">Рис. 9.9</button> показано отображение чисел с различными денежными единицами. В столбцах В и D приведены денежные форматы, а столбцах С и Е – финансовые.
-                Рис. 9.9. Финансовый и денежный формат<br/>
-
-                Финансовый формат можно установить с использованием кнопки Финансовый числовой формат группы Число вкладки Главная.<br/>
-
-                Выделите ячейку или диапазон ячеек.<br/>
-                Щелкните по стрелке кнопки Финансовый числовой формат и выберите обозначение денежной единицы (рис. 9.10).<br/>
-                Установка финансового формата<br/>
-
-                увеличить изображение<br/>
-                Рис. 9.10. Установка финансового формата<br/>
-                Если требуемой денежной единицы нет в списке <button class="badge badge-primary modal-show" data-title="Рисунок 9.10" data-content="<img class='img-fluid center-block' src='../img/10.gif'>">Рис. 9.10</button>, выберите команду Другие финансовые форматы.<br/>
-                Во вкладке Число диалогового окна Формат ячеек в раскрывающемся списке Обозначение выберите обозначение нужной денежной единицы <button class="badge badge-primary modal-show" data-title="Рисунок 9.11" data-content="<img class='img-fluid center-block' src='../img/11.gif'>">Рис. 9.11</button>.<br/>
-
-                Установка произвольного финансового формата<br/>
-
-                увеличить изображение<br/>
-                Рис. 9.11. Установка произвольного финансового формата<br/>
-
-                В денежном формате, в отличие от финансового, можно выбрать способ отображения отрицательных чисел. Кроме того, денежный и финансовый формат отличаются способом выравнивания обозначения денежной единицы и знака минус ( - ) у отрицательных значений <button class="badge badge-primary modal-show" data-title="Рисунок 9.9" data-content="<img class='img-fluid center-block' src='../img/09.gif'>">Рис. 9.9</button>.<br/>
-
-                Выделите ячейку или диапазон ячеек.<br/>
-                Отобразите вкладку Число диалогового окна Формат ячейки.<br/>
-                В списке Числовые форматы выберите Денежный, в раскрывающемся списке Обозначение выберите обозначение нужной денежной единицы, в списке Обозначения числа выберите необходимый формат (рис. 9.12).<br/>
-
-                Установка произвольного денежного формата<br/>
-
-                увеличить изображение<br/>
-                Рис. 9.12. Установка произвольного денежного формата<br/>
-
-                В списке Обозначение финансового и денежного форматов можно найти условные обозначения денежных единиц всех государств Европы, некоторых других стран, а также коды валют почти 200 стран всего мира.<br/>
-
-                Кроме того, в обоих случаях в счетчике Число десятичных разрядов при необходимости можно установить количество десятичных разрядов.<br/>
-
-                Для установки финансового формата с указанием российской денежной единицы ( р.) достаточно выделить ячейки и нажать кнопку Финансовый числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.1" data-content="<img class='img-fluid center-block' src='../img/01.gif'>">Рис. 9.1</button>.<br/>
-
-                Для установки финансового или денежного формата с указанием российской денежной единицы можно также воспользоваться раскрывающимся списком Числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.<br/>
-            </div>
-            <div class="sticker-left sticker-success text-center" data-sticker="Формат даты">
-                Установка формата даты позволяет изменить представление даты, отображаемой в ячейке. На <button class="badge badge-primary modal-show" data-title="Рисунок 9.13" data-content="<img class='img-fluid center-block' src='../img/13.gif'>">Рис. 9.13</button> показаны способы отображения в разных форматах даты 12.04.1961.<br/>
-                Установка формата даты<br/>
-
-                увеличить изображение<br/>
-                Рис. 9.13. Установка формата даты<br/>
-
-                Выделите ячейку или диапазон ячеек.<br/>
-                Отобразите вкладку Число диалогового окна Формат ячейки.<br/>
-                В списке Числовые форматы выберите Дата, в списке Тип выберите необходимый формат (рис. 9.13). При необходимости предварительно в раскрывающемся списке Язык выберите язык, в стандартах которого будет отображена дата.<br/>
-
-                Для установки краткого или длинного формата даты можно также воспользоваться раскрывающимся списком Числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.<br/>
-            </div>
-            <div class="sticker-left sticker-success text-center" data-sticker="Формат времени">
-                Установка формата времени позволяет изменить представление времени, отображаемое в ячейке. На <button class="badge badge-primary modal-show" data-title="Рисунок 9.14" data-content="<img class='img-fluid center-block' src='../img/14.gif'>">Рис. 9.14</button> показаны способы отображения в разных форматах времени 17 часов 45 минут.<br/>
-                Форматы времени<br/>
-
-                увеличить изображение<br/>
-                Рис. 9.14. Форматы времени<br/>
-
-                Выделите ячейку или диапазон ячеек.<br/>
-                Отобразите вкладку Число диалогового окна Формат ячейки.<br/>
-                В списке Числовые форматы выберите Время, в списке Тип выберите необходимый формат (рис. 9.14). При необходимости предварительно в раскрывающемся списке Язык выберите язык, в стандартах которого будет отображено время.<br/>
-
-                Для установки полного формата времени можно также воспользоваться раскрывающимся списком Числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.<br/>
-            </div>
-            <div class="sticker-left sticker-success text-center" data-sticker="Текстовый формат">
-                Текстовый формат используется в тех редких случаях, когда ячейку, содержащую числовые значения, необходимо оформлять как текстовую. Это может потребоваться, например, при создании в ячейке верхних и нижних индексов.<br/>
-
-                Для установки текстового формата можно воспользоваться раскрывающимся списком Числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.<br/>
-
-                Следует обратить внимание, что текстовый формат устанавливает выравнивание чисел по левому краю ячейки.<br/>
-            </div>
-            <div class="sticker-left sticker-success text-center" data-sticker="Дополнительные форматы">
-                Дополнительные форматы используют для удобства ввода номеров телефонов, почтовых индексов, табельных номеров. Этот формат обычно устанавливают еще до ввода данных в ячейки.<br/>
-
-                Выделите ячейку или диапазон ячеек.<br/>
-                Отобразите вкладку Число диалогового окна Формат ячейки.<br/>
-                В списке Числовые форматы выберите Дополнительно, в списке Тип выберите необходимый формат (рис. 9.15). При необходимости предварительно в раскрывающемся списке Язык выберите язык.<br/>
-
-                Установка дополнительных форматов<br/>
-
-                увеличить изображение<br/>
-                Рис. 9.15. Установка дополнительных форматов<br/>
-
-                Например, после установки формата Номер телефона (язык Русский ) при вводе цифр номера телефона в ячейке автоматически отобразятся скобки, и будет установлен дефис <button class="badge badge-primary modal-show" data-title="Рисунок 9.15" data-content="<img class='img-fluid center-block' src='../img/15.gif'>">Рис. 9.15</button>.<br/>
-            </div>
-            <div class="sticker-left sticker-inverse text-center" data-sticker="Использование личных числовых форматов">
-                О личных форматах<br/>
-
-                Личные числовые форматы позволяют изменить стандартные отображения данных в форматах Microsoft Excel, а также применять собственные способы отображения данных. Например, можно добавлять собственные единицы измерения, изменять цвет представления положительных, отрицательных или нулевых значений, добавлять текст к значениям и т. д.<br/>
-
-                Использование личных форматов может облегчить просмотр и анализ данных.<br/>
-            </div>
-            <div class="sticker-left sticker-inverse text-center" data-sticker="Создание числовых форматов">
-                Общие правила<br/>
-
-                Выделите ячейку или диапазон ячеек, для которых создается формат.<br/>
-                Отобразите вкладку Число диалогового окна Формат ячеек.<br/>
-                В списке Числовые форматы и в раскрывающемся списке Тип выберите наиболее близкий к создаваемому стандартный формат<br/>
-                В списке Числовые форматы выберите (все форматы).<br/>
-                В поле Тип откорректируйте установленные или введите новые коды создаваемого формата (рис. 9.16). После ввода всех необходимых кодов нажмите кнопку ОК.<br/>
-                Создание личного числового формата<br/>
-
-                увеличить изображение<br/>
-                Рис. 9.16. Создание личного числового формата<br/>
-
-                При вводе ошибочных кодов формата выйдет сообщение об ошибке. Необходимо нажать кнопку ОК, а затем в поле Тип внести исправления.<br/>
-
-                Созданный числовой формат сохраняется только в той книге, в которой был создан. Для переноса формата в другие книги следует воспользоваться копированием.<br/>
-            </div>
-            <div class="sticker-right sticker-inverse text-center" data-sticker="Структура числового формата">
-                Числовой формат может иметь до четырех разделов, определяющих форматирование положительных чисел, отрицательных чисел, нулевых значений и текста соответственно. Если указаны только два раздела, первый из них используется для форматирования положительных и нулевых значений, а второй – для отрицательных. Если указан один раздел, то ко всем числам применяется этот формат. Разделы отделяются друг от друга точкой с запятой. Если раздел пропущен, должна присутствовать завершающая его точка с запятой.<br/>
-
-                Каждый раздел может включать в себя коды, определяющие следующие параметры: способ отображения числа; цвет шрифта; условие; текст.<br/>
-            </div>
-            <div class="sticker-right sticker-inverse text-center" data-sticker="Отображение чисел">
-                Способ отображения числа задается шаблоном. В шаблоне можно использовать следующие символы:<br/>
-
-                0 (ноль) – метка цифры. Гарантирует отображение не менее заданного количества цифр в целой части числа и заданного количества цифр в десятичной части. Количество цифр задается числом нулей в шаблоне.
-                # – метка цифры. Гарантирует отображение не более заданного количества цифр в десятичной части. Если число имеет больше цифр в десятичной части, то отображаемое число округляется.
-                ? – метка цифры. Работает так же как и метка 0, но вместо незначащих нулей целой и десятичной части отображает пробелы. Используется для выравнивания отображаемых чисел по десятичной запятой.
-
-                В шаблоне можно использовать комбинации символов 0, # и ?. Кроме того, в шаблоне можно использовать запятую для разделения целой и дробной десятичной части и пробел в качестве разделителя групп разрядов.
-
-                В различных разделах числового формата можно устанавливать различные шаблоны отображения чисел. Для отображения отрицательных чисел со знаком минус ( - ) необходимо перед шаблоном числа в соответствующем разделе поставить этот знак. В противном случае, знак отображаться не будет.
-
-                В тех случаях, когда не требуется особенностей форматирования числа, можно указывать код формата Основной. Если не указать никакого кода для формата числа, то код Основной будет установлен автоматически.
-            </div>
-            <div class="sticker-right sticker-inverse text-left" data-sticker="Отображение дат и времени">
-                Способ отображения даты и времени задается шаблоном. В шаблоне можно использовать следующие символы (буквы), приведенные в таблицах. Буквы вводятся в русской раскладке клавиатуры.<br/>
-                <table class="table table-bordered table-hover text-center">
-                    <caption>В одном шаблоне может присутствовать комбинация кодов даты и времени. Символы шаблона можно располагать в любом порядке. Между символами можно использовать пробелы, ставить знаки препинания, скобки и т. д. Для отображения времени в 12-ти часовом формате можно добавить код <code class="highlighter-rouge">АМ/РМ</code> или <code class="highlighter-rouge">А/Р</code>.</caption>
-                    <thead class="thead-light">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Символ</th>
-                        <th scope="col">Назначение</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td><code class="highlighter-rouge">М</code></td>
-                        <td>Месяцы в виде чисел от 1 до 12</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td><code class="highlighter-rouge">ММ</code></td>
-                        <td>Месяцы в виде чисел от 01 до 12</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td><code class="highlighter-rouge">МММ</code></td>
-                        <td>Месяцы в виде Янв</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td><code class="highlighter-rouge">ММММ</code></td>
-                        <td>Месяцы в виде Январь</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td><code class="highlighter-rouge">МММММ</code></td>
-                        <td>Месяцы первой буквой месяца</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td><code class="highlighter-rouge">Д</code></td>
-                        <td>Дни в виде чисел от 1 до 31</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td><code class="highlighter-rouge">ДД</code></td>
-                        <td>Дни в виде чисел от 01 до 31</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">8</th>
-                        <td><code class="highlighter-rouge">ДДД</code></td>
-                        <td>Дни в виде Вс</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">9</th>
-                        <td><code class="highlighter-rouge">ДДДД</code></td>
-                        <td>Дни в виде Воскресенье</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">10</th>
-                        <td><code class="highlighter-rouge">ГГ</code></td>
-                        <td>Года в виде 00 – 99</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">11</th>
-                        <td><code class="highlighter-rouge">ГГГГ</code></td>
-                        <td>Года в виде 1900 – 9999</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">12</th>
-                        <td><code class="highlighter-rouge">ч</code></td>
-                        <td>Часы в виде чисел от 0 до 23</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">13</th>
-                        <td><code class="highlighter-rouge">чч</code></td>
-                        <td>Часы в виде чисел от 00 до 23</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">14</th>
-                        <td><code class="highlighter-rouge">М</code></td>
-                        <td>Минуты в виде чисел от 0 до 59</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">15</th>
-                        <td><code class="highlighter-rouge">ММ</code></td>
-                        <td>Минуты в виде чисел от 00 до 59</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">16</th>
-                        <td><code class="highlighter-rouge">С</code></td>
-                        <td>Секунды в виде чисел от 0 до 59</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">17</th>
-                        <td><code class="highlighter-rouge">СС</code></td>
-                        <td>Секунды в виде чисел от 00 до 59</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-                При выполнении вычислений может потребоваться отображение разницы во времени между двумя событиями в часах, минутах или секундах. В этом случае соответствующий код следует заключить в квадратные скобки.<br/>
-            </div>
-            <div class="sticker-right sticker-inverse text-center" data-sticker="Цвет шрифта">
-                Цвет шрифта указывается в квадратных скобках. Можно выбрать один из восьми цветов: черный, синий, голубой, зеленый, розовый, красный, белый, желтый.<br/>
-
-                Цвет шрифта можно указывать для всего формата. Например, формат<br/>
-
-                <code class="highlighter-rouge">[Синий]Основной</code><br/>
-
-                устанавливает отображение любых чисел синим шрифтом.<br/>
-
-                Можно устанавливать различный цвет шрифта для различных разделов формата. Например, формат<br/>
-
-                <code class="highlighter-rouge">[Красный]Основной;[Зеленый]Основной</code><br/>
-
-                устанавливает отображение положительных чисел и нулевых значений красным шрифтом, а отрицательных – зеленым.<br/>
-
-                Следует отметить, что дальнейшее оформление ячейки не сможет изменить установленный цвет шрифта.<br/>
-            </div>
-            <div class="sticker-right sticker-inverse text-left" data-sticker="Условия">
-                Условия используют для установки числовых форматов, применяемых только для чисел, отвечающих заданному условию. Условие должно состоять из оператора сравнения и значения.<br/>
-
-                В качестве операторов сравнения можно использовать знаки:<br/>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="list-group" id="list-tab" role="tablist">
-                                <a class="list-group-item list-group-item-action active" id="list-equals-list" data-toggle="list" href="#list-equals" role="tab" aria-controls="equals"><i class="fas fa-equals text-danger mx-2"></i>Равно</a>
-                                <a class="list-group-item list-group-item-action" id="list-greater-than-list" data-toggle="list" href="#list-greater-than" role="tab" aria-controls="greater-than"><i class="fas fa-greater-than text-danger mx-2"></i>больше</a>
-                                <a class="list-group-item list-group-item-action" id="list-less-than-list" data-toggle="list" href="#list-less-than" role="tab" aria-controls="less-than"><i class="fas fa-less-than text-danger mx-2"></i>меньше</a>
-                                <a class="list-group-item list-group-item-action" id="list-greater-than-equal-list" data-toggle="list" href="#list-greater-than-equal" role="tab" aria-controls="greater-than-equal"><i class="fas fa-greater-than-equal text-danger mx-2"></i>больше или равно</a>
-                                <a class="list-group-item list-group-item-action" id="list-less-than-equal-list" data-toggle="list" href="#list-less-than-equal" role="tab" aria-controls="less-than-equal"><i class="fas fa-less-than-equal text-danger mx-2"></i>меньше или равно</a>
-                                <a class="list-group-item list-group-item-action" id="list-not-equal-list" data-toggle="list" href="#list-not-equal" role="tab" aria-controls="not-equal"><i class="fas fa-not-equal text-danger mx-2"></i>не равно</a>
                             </div>
                         </div>
-                        <div class="col-8">
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="list-equals" role="tabpanel" aria-labelledby="list-equals-list">Знак: Равно<br> Символ знака: <i class="fas fa-equals text-danger mx-2"></i><br> Обозначение знака в Excel: = </div>
-                                <div class="tab-pane fade" id="list-greater-than" role="tabpanel" aria-labelledby="list-greater-than-list">Знак: Больше<br> Символ знака: <i class="fas fa-greater-than text-danger mx-2"></i><br> Обозначение знака в Excel: ></div>
-                                <div class="tab-pane fade" id="list-less-than" role="tabpanel" aria-labelledby="list-less-than-list">Знак: Меньше<br> Символ знака: <i class="fas fa-less-than text-danger mx-2"></i><br>Обозначение знака в Excel: <</div>
-                                <div class="tab-pane fade" id="list-greater-than-equal" role="tabpanel" aria-labelledby="list-greater-than-equal-list">Знак: Больше или равно<br> Символ знака: <i class="fas fa-greater-than-equal text-danger mx-2"></i><br>Обозначение знакак в Excel: >=</div>
-                                <div class="tab-pane fade" id="list-less-than-equal" role="tabpanel" aria-labelledby="list-less-than-equal-list">Знак: Меньше или равно<br> Символ знака: <i class="fas fa-less-than-equal text-danger mx-2"></i><br>Обозначение знакак в Excel: <=</div>
-                                <div class="tab-pane fade" id="list-not-equal" role="tabpanel" aria-labelledby="list-greater-than-equal-list">Знак: Не равно<br> Символ знака: <i class="fas fa-not-equal text-danger mx-2"></i><br>Обозначение знакак в Excel: <></div>
+                        <div class="sticker-left sticker-warning text-left" data-sticker="Форматы отрицательных чисел">
+                            Для удобства просмотра данных можно установить отображение отрицательных чисел красным цветом.
+                            Знак минус ( <code class="highlighter-rouge">-</code> ) при этом можно отображать или не отображать. На <button class="badge badge-primary modal-show" data-title="Рисунок 9.4" data-content="<img class='img-fluid center-block' src='../img/04.gif'>">Рис. 9.4</button> показано отображение отрицательных чисел в ячейках <code class="highlighter-rouge">D2</code> и <code class="highlighter-rouge">D4</code> красным цветом со знаком минус ( <code class="highlighter-rouge">-</code> ),
+                            а в ячейках <code class="highlighter-rouge"> E2</code> и <code class="highlighter-rouge">E4</code> – красным цветом без знака минус.
+                            <div class="col-md-8">
+                                <div class="item">
+                                    <img class="w-100" src="../img/04.gif" alt="">
+                                    <div class="item-caption">
+                                        <h3>Установка отрицательного числа</h3>
+                                        <p>Скриншот 9.4
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг первый</h4>
+                                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                                <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02_1.gif'>">Скрин</button>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг второй</h4>
+                                                <p class="card-text">Отобразите вкладку Число диалогового окна Формат ячейки. </p>
+                                                <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03_2.gif'>">Скрин</button>
+                                            </div>
+                                            <!-- Изображение -->
+                                            <img class="card-img-bottom" src="../img/03_2.gif" alt="...">
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/04.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг третий</h4>
+                                                <p class="card-text">В списке Числовые форматы выберите Числовой, в списке Отрицательные числа выберите необходимый формат (см. рис. 9.4)..</p>
+                                                <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.4</button>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/04.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Итог</h4>
+                                                <p class="card-text">В списке Числовые форматы выберите Числовой, в списке Отрицательные числа выберите необходимый формат (см. рис. 9.4)..</p>
+                                                <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.4</button>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sticker-left sticker-warning text-center" data-sticker="Форматы дробных чисел">
+                            Изменение разрядности десятичных дробей<br/>
+                            Изменение разрядности позволяет изменять количество знаков после запятой, отображаемое в ячейке.
+                            <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг первый</h4>
+                                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                                <a href="#" class="btn btn-primary">Перейти</a>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг второй</h4>
+                                                <p class="card-text">Нажмите кнопку Увеличить разрядность или Уменьшить разрядность группы Число вкладки Главная (рис. 9.5). Одно нажатие соответствующей кнопки увеличивает или уменьшает на один знак количество отображаемых знаков после запятой.</p>
+                                                <a href="#" class="btn btn-primary">Перейти</a>
+                                            </div>
+                                            <!-- Изображение -->
+                                            <img class="card-img-bottom" src="../img/02_2.gif" alt="...">
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/05.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Итог</h4>
+                                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                                <a href="#" class="btn btn-primary">Перейти</a>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                </div>
+                            </div>
+                            Форматы простых дробей<br/>
+                            Microsoft Excel позволяет отображать десятичные дроби в виде простых дробей. Дробный формат округляет десятичную дробь до ближайшей простой дроби в соответствии с выбранным типом. На <button class="badge badge-primary modal-show" data-title="Рисунок 9.6" data-content="<img class='img-fluid center-block' src='../img/06.gif'>">Рис. 9.6</button> в строках 3:6 показано отображение чисел из строки 2 в различных дробных форматах.
+                            <div class="col-md-8">
+                                <div class="item">
+                                    <img class="w-100" src="../img/06.gif" alt="">
+                                    <div class="item-caption">
+                                        <h3>Установка дробного формата</h3>
+                                        <p>Скриншот 9.6
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг первый</h4>
+                                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                                <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/02_1.gif'>">Скрин</button>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг второй</h4>
+                                                <p class="card-text">Отобразите вкладку Число диалогового окна Формат ячейки. </p>
+                                                <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03_2.gif'>">Скрин</button>
+                                            </div>
+                                            <!-- Изображение -->
+                                            <img class="card-img-bottom" src="../img/03_2.gif" alt="...">
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/04.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг третий</h4>
+                                                <p class="card-text">В списке Числовые форматы выберите Дробный, в списке Тип выберите необходимый формат (см. рис. 9.6).</p>
+                                                <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/03.gif'>">Скрин 9.4</button>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/06.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Итог</h4>
+                                                <p class="card-text">В списке Числовые форматы выберите Числовой, в списке Отрицательные числа выберите необходимый формат (см. рис. 9.4)..</p>
+                                                <button class="btn btn-primary modal-show" data-title="Итог" data-content="<img class='img-fluid center-block' src='../img/06.gif'>">Скрин 9.4</button>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                </div>
+                            </div>
+                            Дробный формат отображает в простых дробях только десятичные дроби. Отображение целых чисел не изменяется.<br>
+
+                            Процентный формат
+                            Процентный формат позволяет установить обозначение знака процента ( % ) для числа, отображаемого в ячейке. Обычно это используют для представления результатов вычислений.
+                            <div class="sticker-right sticker-danger text-center" data-sticker="Инструкция">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/02_1.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг первый</h4>
+                                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                                <a href="#" class="btn btn-primary">Перейти</a>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Шаг второй</h4>
+                                                <p class="card-text">Нажмите кнопку Процентный формат группы Число вкладки Главная</p>
+                                                <a href="#" class="btn btn-primary">Перейти</a>
+                                            </div>
+                                            <!-- Изображение -->
+                                            <img class="card-img-bottom" src="../img/02_2.gif" alt="...">
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="card mx-auto mb-3" style="max-width: 300px;">
+                                            <!-- Изображение -->
+                                            <img class="card-img-top" src="../img/07.gif" alt="...">
+                                            <!-- Текстовый контент -->
+                                            <div class="card-body">
+                                                <h4 class="card-title">Итог</h4>
+                                                <p class="card-text">Выделите ячейку или диапазон ячеек.</p>
+                                                <a href="#" class="btn btn-primary">Перейти</a>
+                                            </div>
+                                        </div><!-- Конец карточки -->
+                                    </div>
+                                </div>
+                            </div>
+                            По умолчанию в процентном формате число отображается без десятичных разрядов. Для установки необходимого количества десятичных разрядов процентного формата можно воспользоваться кнопками Увеличить разрядность или Уменьшить разрядность группы Число вкладки Главная <button class="badge badge-primary modal-show" data-title="Рисунок 9.5" data-content="<img class='img-fluid center-block' src='../img/05.gif'>">Рис. 9.5</button>.<br>
+
+                            Для чисел, введенных с клавиатуры, процентный формат изменяет отображение не только в ячейке, но и в строке формул. Например, число 0,4 после применения процентного формата будет отображаться и в ячейке, и в строке формул как 40%. На результатах вычислений это никак не сказывается.
+                        </div>
+                        <div class="sticker-left sticker-warning text-center" data-sticker="Экспоненциальный формат">
+                            Экспоненциальный формат используется для отображения очень больших или очень маленьких чисел в экспоненциальной записи.<br/>
+
+                            Например, масса планеты Земля ( 5980000000000000000000000 кг) будет отображена как 5,98E+24, что означает 5,98 умноженное на 1024 (десять в двадцать четвертой степени), а масса атома водорода ( 0,000000000000000000000000001673 кг) будет отображена как 1,673E-27, что означает 1,673 умноженное на 10-27 (десять в минус двадцать седьмой степени) <button class="badge badge-primary modal-show" data-title="Рисунок 9.8" data-content="<img class='img-fluid center-block' src='../img/08.gif'>">Рис. 9.8</button>. Для установки экспоненциального формата проще всего воспользоваться раскрывающимся списком Числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.<br/>
+                        </div>
+                        <div class="sticker-left sticker-warning text-center" data-sticker="Финансовый и денежный формат">
+                            Установка финансового или денежного формата позволяет отображать в ячейке число с указанием денежной единицы. На <button class="badge badge-primary modal-show" data-title="Рисунок 9.9" data-content="<img class='img-fluid center-block' src='../img/09.gif'>">Рис. 9.9</button> показано отображение чисел с различными денежными единицами. В столбцах В и D приведены денежные форматы, а столбцах С и Е – финансовые.
+                            Рис. 9.9. Финансовый и денежный формат<br/>
+
+                            Финансовый формат можно установить с использованием кнопки Финансовый числовой формат группы Число вкладки Главная.<br/>
+
+                            Выделите ячейку или диапазон ячеек.<br/>
+                            Щелкните по стрелке кнопки Финансовый числовой формат и выберите обозначение денежной единицы (рис. 9.10).<br/>
+                            Установка финансового формата<br/>
+
+                            увеличить изображение<br/>
+                            Рис. 9.10. Установка финансового формата<br/>
+                            Если требуемой денежной единицы нет в списке <button class="badge badge-primary modal-show" data-title="Рисунок 9.10" data-content="<img class='img-fluid center-block' src='../img/10.gif'>">Рис. 9.10</button>, выберите команду Другие финансовые форматы.<br/>
+                            Во вкладке Число диалогового окна Формат ячеек в раскрывающемся списке Обозначение выберите обозначение нужной денежной единицы <button class="badge badge-primary modal-show" data-title="Рисунок 9.11" data-content="<img class='img-fluid center-block' src='../img/11.gif'>">Рис. 9.11</button>.<br/>
+
+                            Установка произвольного финансового формата<br/>
+
+                            увеличить изображение<br/>
+                            Рис. 9.11. Установка произвольного финансового формата<br/>
+
+                            В денежном формате, в отличие от финансового, можно выбрать способ отображения отрицательных чисел. Кроме того, денежный и финансовый формат отличаются способом выравнивания обозначения денежной единицы и знака минус ( - ) у отрицательных значений <button class="badge badge-primary modal-show" data-title="Рисунок 9.9" data-content="<img class='img-fluid center-block' src='../img/09.gif'>">Рис. 9.9</button>.<br/>
+
+                            Выделите ячейку или диапазон ячеек.<br/>
+                            Отобразите вкладку Число диалогового окна Формат ячейки.<br/>
+                            В списке Числовые форматы выберите Денежный, в раскрывающемся списке Обозначение выберите обозначение нужной денежной единицы, в списке Обозначения числа выберите необходимый формат (рис. 9.12).<br/>
+
+                            Установка произвольного денежного формата<br/>
+
+                            увеличить изображение<br/>
+                            Рис. 9.12. Установка произвольного денежного формата<br/>
+
+                            В списке Обозначение финансового и денежного форматов можно найти условные обозначения денежных единиц всех государств Европы, некоторых других стран, а также коды валют почти 200 стран всего мира.<br/>
+
+                            Кроме того, в обоих случаях в счетчике Число десятичных разрядов при необходимости можно установить количество десятичных разрядов.<br/>
+
+                            Для установки финансового формата с указанием российской денежной единицы ( р.) достаточно выделить ячейки и нажать кнопку Финансовый числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.1" data-content="<img class='img-fluid center-block' src='../img/01.gif'>">Рис. 9.1</button>.<br/>
+
+                            Для установки финансового или денежного формата с указанием российской денежной единицы можно также воспользоваться раскрывающимся списком Числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.<br/>
+                        </div>
+                        <div class="sticker-left sticker-success text-center" data-sticker="Формат даты">
+                            Установка формата даты позволяет изменить представление даты, отображаемой в ячейке. На <button class="badge badge-primary modal-show" data-title="Рисунок 9.13" data-content="<img class='img-fluid center-block' src='../img/13.gif'>">Рис. 9.13</button> показаны способы отображения в разных форматах даты 12.04.1961.<br/>
+                            Установка формата даты<br/>
+
+                            увеличить изображение<br/>
+                            Рис. 9.13. Установка формата даты<br/>
+
+                            Выделите ячейку или диапазон ячеек.<br/>
+                            Отобразите вкладку Число диалогового окна Формат ячейки.<br/>
+                            В списке Числовые форматы выберите Дата, в списке Тип выберите необходимый формат (рис. 9.13). При необходимости предварительно в раскрывающемся списке Язык выберите язык, в стандартах которого будет отображена дата.<br/>
+
+                            Для установки краткого или длинного формата даты можно также воспользоваться раскрывающимся списком Числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.<br/>
+                        </div>
+                        <div class="sticker-left sticker-success text-center" data-sticker="Формат времени">
+                            Установка формата времени позволяет изменить представление времени, отображаемое в ячейке. На <button class="badge badge-primary modal-show" data-title="Рисунок 9.14" data-content="<img class='img-fluid center-block' src='../img/14.gif'>">Рис. 9.14</button> показаны способы отображения в разных форматах времени 17 часов 45 минут.<br/>
+                            Форматы времени<br/>
+
+                            увеличить изображение<br/>
+                            Рис. 9.14. Форматы времени<br/>
+
+                            Выделите ячейку или диапазон ячеек.<br/>
+                            Отобразите вкладку Число диалогового окна Формат ячейки.<br/>
+                            В списке Числовые форматы выберите Время, в списке Тип выберите необходимый формат (рис. 9.14). При необходимости предварительно в раскрывающемся списке Язык выберите язык, в стандартах которого будет отображено время.<br/>
+
+                            Для установки полного формата времени можно также воспользоваться раскрывающимся списком Числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.<br/>
+                        </div>
+                        <div class="sticker-left sticker-success text-center" data-sticker="Текстовый формат">
+                            Текстовый формат используется в тех редких случаях, когда ячейку, содержащую числовые значения, необходимо оформлять как текстовую. Это может потребоваться, например, при создании в ячейке верхних и нижних индексов.<br/>
+
+                            Для установки текстового формата можно воспользоваться раскрывающимся списком Числовой формат <button class="badge badge-primary modal-show" data-title="Рисунок 9.2" data-content="<img class='img-fluid center-block' src='../img/02.gif'>">Рис. 9.2</button>.<br/>
+
+                            Следует обратить внимание, что текстовый формат устанавливает выравнивание чисел по левому краю ячейки.<br/>
+                        </div>
+                        <div class="sticker-left sticker-success text-center" data-sticker="Дополнительные форматы">
+                            Дополнительные форматы используют для удобства ввода номеров телефонов, почтовых индексов, табельных номеров. Этот формат обычно устанавливают еще до ввода данных в ячейки.<br/>
+
+                            Выделите ячейку или диапазон ячеек.<br/>
+                            Отобразите вкладку Число диалогового окна Формат ячейки.<br/>
+                            В списке Числовые форматы выберите Дополнительно, в списке Тип выберите необходимый формат (рис. 9.15). При необходимости предварительно в раскрывающемся списке Язык выберите язык.<br/>
+
+                            Установка дополнительных форматов<br/>
+
+                            увеличить изображение<br/>
+                            Рис. 9.15. Установка дополнительных форматов<br/>
+
+                            Например, после установки формата Номер телефона (язык Русский ) при вводе цифр номера телефона в ячейке автоматически отобразятся скобки, и будет установлен дефис <button class="badge badge-primary modal-show" data-title="Рисунок 9.15" data-content="<img class='img-fluid center-block' src='../img/15.gif'>">Рис. 9.15</button>.<br/>
+                        </div>
+                        <div class="sticker-left sticker-inverse text-center" data-sticker="Использование личных числовых форматов">
+                            О личных форматах<br/>
+
+                            Личные числовые форматы позволяют изменить стандартные отображения данных в форматах Microsoft Excel, а также применять собственные способы отображения данных. Например, можно добавлять собственные единицы измерения, изменять цвет представления положительных, отрицательных или нулевых значений, добавлять текст к значениям и т. д.<br/>
+
+                            Использование личных форматов может облегчить просмотр и анализ данных.<br/>
+                        </div>
+                        <div class="sticker-left sticker-inverse text-center" data-sticker="Создание числовых форматов">
+                            Общие правила<br/>
+
+                            Выделите ячейку или диапазон ячеек, для которых создается формат.<br/>
+                            Отобразите вкладку Число диалогового окна Формат ячеек.<br/>
+                            В списке Числовые форматы и в раскрывающемся списке Тип выберите наиболее близкий к создаваемому стандартный формат<br/>
+                            В списке Числовые форматы выберите (все форматы).<br/>
+                            В поле Тип откорректируйте установленные или введите новые коды создаваемого формата (рис. 9.16). После ввода всех необходимых кодов нажмите кнопку ОК.<br/>
+                            Создание личного числового формата<br/>
+
+                            увеличить изображение<br/>
+                            Рис. 9.16. Создание личного числового формата<br/>
+
+                            При вводе ошибочных кодов формата выйдет сообщение об ошибке. Необходимо нажать кнопку ОК, а затем в поле Тип внести исправления.<br/>
+
+                            Созданный числовой формат сохраняется только в той книге, в которой был создан. Для переноса формата в другие книги следует воспользоваться копированием.<br/>
+                        </div>
+                        <div class="sticker-right sticker-inverse text-center" data-sticker="Структура числового формата">
+                            Числовой формат может иметь до четырех разделов, определяющих форматирование положительных чисел, отрицательных чисел, нулевых значений и текста соответственно. Если указаны только два раздела, первый из них используется для форматирования положительных и нулевых значений, а второй – для отрицательных. Если указан один раздел, то ко всем числам применяется этот формат. Разделы отделяются друг от друга точкой с запятой. Если раздел пропущен, должна присутствовать завершающая его точка с запятой.<br/>
+
+                            Каждый раздел может включать в себя коды, определяющие следующие параметры: способ отображения числа; цвет шрифта; условие; текст.<br/>
+                        </div>
+                        <div class="sticker-right sticker-inverse text-center" data-sticker="Отображение чисел">
+                            Способ отображения числа задается шаблоном. В шаблоне можно использовать следующие символы:<br/>
+
+                            0 (ноль) – метка цифры. Гарантирует отображение не менее заданного количества цифр в целой части числа и заданного количества цифр в десятичной части. Количество цифр задается числом нулей в шаблоне.
+                            # – метка цифры. Гарантирует отображение не более заданного количества цифр в десятичной части. Если число имеет больше цифр в десятичной части, то отображаемое число округляется.
+                            ? – метка цифры. Работает так же как и метка 0, но вместо незначащих нулей целой и десятичной части отображает пробелы. Используется для выравнивания отображаемых чисел по десятичной запятой.
+
+                            В шаблоне можно использовать комбинации символов 0, # и ?. Кроме того, в шаблоне можно использовать запятую для разделения целой и дробной десятичной части и пробел в качестве разделителя групп разрядов.
+
+                            В различных разделах числового формата можно устанавливать различные шаблоны отображения чисел. Для отображения отрицательных чисел со знаком минус ( - ) необходимо перед шаблоном числа в соответствующем разделе поставить этот знак. В противном случае, знак отображаться не будет.
+
+                            В тех случаях, когда не требуется особенностей форматирования числа, можно указывать код формата Основной. Если не указать никакого кода для формата числа, то код Основной будет установлен автоматически.
+                        </div>
+                        <div class="sticker-right sticker-inverse text-left" data-sticker="Отображение дат и времени">
+                            Способ отображения даты и времени задается шаблоном. В шаблоне можно использовать следующие символы (буквы), приведенные в таблицах. Буквы вводятся в русской раскладке клавиатуры.<br/>
+                            <table class="table table-bordered table-hover text-center">
+                                <caption>В одном шаблоне может присутствовать комбинация кодов даты и времени. Символы шаблона можно располагать в любом порядке. Между символами можно использовать пробелы, ставить знаки препинания, скобки и т. д. Для отображения времени в 12-ти часовом формате можно добавить код <code class="highlighter-rouge">АМ/РМ</code> или <code class="highlighter-rouge">А/Р</code>.</caption>
+                                <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Символ</th>
+                                    <th scope="col">Назначение</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td><code class="highlighter-rouge">М</code></td>
+                                    <td>Месяцы в виде чисел от 1 до 12</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td><code class="highlighter-rouge">ММ</code></td>
+                                    <td>Месяцы в виде чисел от 01 до 12</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td><code class="highlighter-rouge">МММ</code></td>
+                                    <td>Месяцы в виде Янв</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td><code class="highlighter-rouge">ММММ</code></td>
+                                    <td>Месяцы в виде Январь</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td><code class="highlighter-rouge">МММММ</code></td>
+                                    <td>Месяцы первой буквой месяца</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td><code class="highlighter-rouge">Д</code></td>
+                                    <td>Дни в виде чисел от 1 до 31</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">7</th>
+                                    <td><code class="highlighter-rouge">ДД</code></td>
+                                    <td>Дни в виде чисел от 01 до 31</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">8</th>
+                                    <td><code class="highlighter-rouge">ДДД</code></td>
+                                    <td>Дни в виде Вс</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">9</th>
+                                    <td><code class="highlighter-rouge">ДДДД</code></td>
+                                    <td>Дни в виде Воскресенье</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">10</th>
+                                    <td><code class="highlighter-rouge">ГГ</code></td>
+                                    <td>Года в виде 00 – 99</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">11</th>
+                                    <td><code class="highlighter-rouge">ГГГГ</code></td>
+                                    <td>Года в виде 1900 – 9999</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">12</th>
+                                    <td><code class="highlighter-rouge">ч</code></td>
+                                    <td>Часы в виде чисел от 0 до 23</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">13</th>
+                                    <td><code class="highlighter-rouge">чч</code></td>
+                                    <td>Часы в виде чисел от 00 до 23</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">14</th>
+                                    <td><code class="highlighter-rouge">М</code></td>
+                                    <td>Минуты в виде чисел от 0 до 59</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">15</th>
+                                    <td><code class="highlighter-rouge">ММ</code></td>
+                                    <td>Минуты в виде чисел от 00 до 59</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">16</th>
+                                    <td><code class="highlighter-rouge">С</code></td>
+                                    <td>Секунды в виде чисел от 0 до 59</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">17</th>
+                                    <td><code class="highlighter-rouge">СС</code></td>
+                                    <td>Секунды в виде чисел от 00 до 59</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            При выполнении вычислений может потребоваться отображение разницы во времени между двумя событиями в часах, минутах или секундах. В этом случае соответствующий код следует заключить в квадратные скобки.<br/>
+                        </div>
+                        <div class="sticker-right sticker-inverse text-center" data-sticker="Цвет шрифта">
+                            Цвет шрифта указывается в квадратных скобках. Можно выбрать один из восьми цветов: черный, синий, голубой, зеленый, розовый, красный, белый, желтый.<br/>
+
+                            Цвет шрифта можно указывать для всего формата. Например, формат<br/>
+
+                            <code class="highlighter-rouge">[Синий]Основной</code><br/>
+
+                            устанавливает отображение любых чисел синим шрифтом.<br/>
+
+                            Можно устанавливать различный цвет шрифта для различных разделов формата. Например, формат<br/>
+
+                            <code class="highlighter-rouge">[Красный]Основной;[Зеленый]Основной</code><br/>
+
+                            устанавливает отображение положительных чисел и нулевых значений красным шрифтом, а отрицательных – зеленым.<br/>
+
+                            Следует отметить, что дальнейшее оформление ячейки не сможет изменить установленный цвет шрифта.<br/>
+                        </div>
+                        <div class="sticker-right sticker-inverse text-left" data-sticker="Условия">
+                            Условия используют для установки числовых форматов, применяемых только для чисел, отвечающих заданному условию. Условие должно состоять из оператора сравнения и значения.<br/>
+
+                            В качестве операторов сравнения можно использовать знаки:<br/>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="list-group" id="list-tab" role="tablist">
+                                            <a class="list-group-item list-group-item-action active" id="list-equals-list" data-toggle="list" href="#list-equals" role="tab" aria-controls="equals"><i class="fas fa-equals text-danger mx-2"></i>Равно</a>
+                                            <a class="list-group-item list-group-item-action" id="list-greater-than-list" data-toggle="list" href="#list-greater-than" role="tab" aria-controls="greater-than"><i class="fas fa-greater-than text-danger mx-2"></i>больше</a>
+                                            <a class="list-group-item list-group-item-action" id="list-less-than-list" data-toggle="list" href="#list-less-than" role="tab" aria-controls="less-than"><i class="fas fa-less-than text-danger mx-2"></i>меньше</a>
+                                            <a class="list-group-item list-group-item-action" id="list-greater-than-equal-list" data-toggle="list" href="#list-greater-than-equal" role="tab" aria-controls="greater-than-equal"><i class="fas fa-greater-than-equal text-danger mx-2"></i>больше или равно</a>
+                                            <a class="list-group-item list-group-item-action" id="list-less-than-equal-list" data-toggle="list" href="#list-less-than-equal" role="tab" aria-controls="less-than-equal"><i class="fas fa-less-than-equal text-danger mx-2"></i>меньше или равно</a>
+                                            <a class="list-group-item list-group-item-action" id="list-not-equal-list" data-toggle="list" href="#list-not-equal" role="tab" aria-controls="not-equal"><i class="fas fa-not-equal text-danger mx-2"></i>не равно</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="list-equals" role="tabpanel" aria-labelledby="list-equals-list">Знак: Равно<br> Символ знака: <i class="fas fa-equals text-danger mx-2"></i><br> Обозначение знака в Excel: = </div>
+                                            <div class="tab-pane fade" id="list-greater-than" role="tabpanel" aria-labelledby="list-greater-than-list">Знак: Больше<br> Символ знака: <i class="fas fa-greater-than text-danger mx-2"></i><br> Обозначение знака в Excel: ></div>
+                                            <div class="tab-pane fade" id="list-less-than" role="tabpanel" aria-labelledby="list-less-than-list">Знак: Меньше<br> Символ знака: <i class="fas fa-less-than text-danger mx-2"></i><br>Обозначение знака в Excel: <</div>
+                                            <div class="tab-pane fade" id="list-greater-than-equal" role="tabpanel" aria-labelledby="list-greater-than-equal-list">Знак: Больше или равно<br> Символ знака: <i class="fas fa-greater-than-equal text-danger mx-2"></i><br>Обозначение знакак в Excel: >=</div>
+                                            <div class="tab-pane fade" id="list-less-than-equal" role="tabpanel" aria-labelledby="list-less-than-equal-list">Знак: Меньше или равно<br> Символ знака: <i class="fas fa-less-than-equal text-danger mx-2"></i><br>Обозначение знакак в Excel: <=</div>
+                                            <div class="tab-pane fade" id="list-not-equal" role="tabpanel" aria-labelledby="list-greater-than-equal-list">Знак: Не равно<br> Символ знака: <i class="fas fa-not-equal text-danger mx-2"></i><br>Обозначение знакак в Excel: <></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            Значение условия задается числом. Оператор сравнения и значение указываются в квадратных скобках. Например, формат<br/>
+
+                            <code class="highlighter-rouge">[Синий][<=36,6]Основной;[Красный][>36,6]Основной</code> устанавливает отображение чисел меньших или равных <code class="highlighter-rouge">36,6</code> синим шрифтом, а чисел более <code class="highlighter-rouge">36,6</code> – красным шрифтом.<br/>
+                        </div>
+                        <div class="sticker-right sticker-inverse text-left" data-sticker="Текст">
+                            Текст, отображаемый в ячейке вместе с числом, должен быть заключен в кавычки ( <code class="highlighter-rouge">" "</code> ). Для отображения одиночного символа можно поставить перед ним обратную косую черту ( <code class="highlighter-rouge">\</code> ).<br/>
+
+                            Чтобы задать пробел между числом и текстом, в код формата необходимо включить знак подчеркивания ( <code class="highlighter-rouge">_</code> ) и пробел или два знака подчеркивания.<br/>
+
+                            Текст может располагаться и перед числом и после числа, а также одновременно перед числом и после числа.<br/>
+
+                            Можно добавлять различный текст для различных разделов формата. Например, формат<br/>
+
+                            <code class="highlighter-rouge">0,00_ "Прибыль";0,00_ "Убыток";0,00;Основной</code><br/>
+
+                            устанавливает отображение положительных чисел с текстом <code class="highlighter-rouge">Прибыль</code>, отрицательных – с текстом <code class="highlighter-rouge">Убыток</code>, а нулевых значений без текста.<br/>
+
+                            Текст можно добавлять и в форматы с условиями. Например, формат<br/>
+
+                            <code class="highlighter-rouge">[<=36,6]0,0"_ Нормальная";[>36,6]0,0"_ Повышенная"</code><br/>
+
+                            устанавливает отображение чисел меньших или равных <code class="highlighter-rouge">36,6</code> с текстом <code class="highlighter-rouge">Нормальная</code>, а чисел более <code class="highlighter-rouge">36,6</code> – с текстом <code class="highlighter-rouge">Повышенная</code>.<br/>
+                        </div>
+                        <div class="sticker-right sticker-inverse text-center" data-sticker="Текстовый раздел">
+                            Текстовый раздел позволяет отображать в ячейке постоянный текст вместе с текстом, вводимым с клавиатуры. Текстовый раздел включает собственно текст и знак @, установленный перед текстом или после текста. Текст должен быть заключен в кавычки (" "). Между символами текста можно использовать пробелы, ставить знаки препинания, скобки и т. д.<br/>
+
+                            Текстовый раздел может быть единственным разделом формата. Например, формат<br/>
+
+                            "Студент" @<br/>
+
+                            устанавливает в ячейке отображение слова Студент перед любым текстом в ячейке, а формат<br/>
+
+                            @" - сотрудник"<br/>
+
+                            устанавливает в ячейке отображение текста - сотрудник после любого текста в ячейке.<br/>
+
+                            Если в ячейку с таким форматом вводится число или дата, то Microsoft Excel воспринимает это число не как число, а как текст.<br/>
+
+                            Текстовый раздел также может присутствовать в формате наряду с другими разделами. В этом случае он всегда является последним разделом. Например, формат<br/>
+
+                            ДД.ММ.ГГ;@" - Ошибка"<br/>
+
+                            устанавливает в ячейке отображение даты в формате ДД.ММ.ГГ при вводе текста или цифр, не являющихся датой, в ячейке справа от введенных данных отображается текст - Ошибка.<br/>
+
+                            Можно изменять цвет шрифта при использовании текстового раздела. Например, формат<br/>
+
+                            ДД.ММ.ГГ;[Красный]@" - Ошибка"<br/>
+
+                            Работает также, как и в предыдущем случае, но введенные ошибочные данные и текст - Ошибка будут отображены красным шрифтом.<br/>
+                        </div>
+                        <div class="sticker-right sticker-inverse text-center" data-sticker="Удаление личного формата">
+
+                            Отобразите вкладку Число диалогового окна Формат ячеек.<br/>
+                            В списке Числовые форматы выберите (все форматы) (см. рис. 9.16).<br/>
+                            В поле Тип выберите удаляемый формат и нажмите кнопку Удалить. Нажмите кнопку Закрыть.<br/>
+
+                        </div>
+                        <div class="sticker-right sticker-inverse text-center" data-sticker="Упражнение 9">
+                            Запустите Microsoft Excel 2019.<br/>
+
+                            Откройте файл exercise_09.xlsx.<br/>
+                            Задание 1<br/>
+
+                            Перейдите к листу Лист 1.<br/>
+                            Для ячеек столбца Стоимость, руб. ( В2:В6 ) установите денежный формат (р.).<br/>
+                            Для ячеек столбца Скидка ( С2:С6 ) увеличьте разрядность до четырех знаков после запятой.<br/>
+                            Для ячеек столбца Скидка, % ( D2:D6 ) установите процентный формат.<br/>
+                            Для ячеек столбца Дата размещения ( E2:E6 ) установите формат даты в последовательности: месяц (слово), год (четырьмя цифрами), без указания числа ( Июль 2007 ).<br/>
+                            Для ячеек столбца Дата исполнения ( F2:F6 ) установите формат даты в последовательности: число (цифрами), месяц (цифрами) без указания года ( 14.3 ).<br/>
+                            Для ячеек столбца Стоимость, $ ( G2:G6 ) установите денежный формат ( $ ).<br/>
+                            Для ячеек столбца Затраты ( H2:H9 ) установить общий формат данных.<br/>
+                            Для ячеек столбца Количество ( I2:I6 ) установите формат с разделителями разрядов.<br/>
+                            Для ячеек столбца Код заказа ( J2:J6 ) установите текстовый формат.<br/>
+
+                            Задание 2<br/>
+
+                            Перейдите к листу Лист 2.<br/>
+                            Для ячеек G2:G26 установите числовой формат, отображающие положительные числа шрифтом синего цвета, а отрицательные – шрифтом красного цвета.<br/>
+                            Для ячеек F2:F26 установите числовой формат, отображающий числа более 50 шрифтом синего цвета, а менее 50 – шрифтом красного цвета.
+                            Для ячеек С2:С26 установите числовой формат, отображающий даты в виде дня недели полным словом.<br/>
+                            Для ячеек В2:В26 установите числовой формат, отображающий после числа текст "штук".<br/>
+                            Для ячеек А2:А26 установите числовой формат, отображающий перед текстом текст "Шоколад".<br/>
+
+                            Сохраните файл под именем Lesson_09.<br/>
+
+                            Закройте Microsoft Excel 2019.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="modal fade" id="Settings">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Настройка меню</h5>
+                            <button class="close" data-dismiss="modal">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <p><div class="row">
+                                <div class="form-group col-md-12">
+                                    <h3>Темы</h3>
+                            <p>Выберите из одну из ниже предложенных тем</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <a href="#" data-theme="default-theme" class="theme default-theme selected"></a>
+                            <a href="#" data-theme="chiller-theme" class="theme chiller-theme"></a>
+                            <a href="#" data-theme="legacy-theme" class="theme legacy-theme"></a>
+                            <a href="#" data-theme="ice-theme" class="theme ice-theme"></a>
+                            <a href="#" data-theme="cool-theme" class="theme cool-theme"></a>
+                            <a href="#" data-theme="light-theme" class="theme light-theme"></a>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <p>Выберите изображение, которое вам нравится </p>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <a href="#" data-bg="bg1" class="theme theme-bg selected"></a>
+                            <a href="#" data-bg="bg2" class="theme theme-bg"></a>
+                            <a href="#" data-bg="bg3" class="theme theme-bg"></a>
+                            <a href="#" data-bg="bg4" class="theme theme-bg"></a>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="toggle-bg" checked>
+                                <label class="custom-control-label" for="toggle-bg">Фоновое изображение</label>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="toggle-border-radius">
+                                <label class="custom-control-label" for="toggle-border-radius">Градиент</label>
+                            </div>
+                        </div></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" data-dismiss="modal">Закрыть</button     >
                         </div>
                     </div>
                 </div>
-
-
-                Значение условия задается числом. Оператор сравнения и значение указываются в квадратных скобках. Например, формат<br/>
-
-                <code class="highlighter-rouge">[Синий][<=36,6]Основной;[Красный][>36,6]Основной</code> устанавливает отображение чисел меньших или равных <code class="highlighter-rouge">36,6</code> синим шрифтом, а чисел более <code class="highlighter-rouge">36,6</code> – красным шрифтом.<br/>
             </div>
-            <div class="sticker-right sticker-inverse text-left" data-sticker="Текст">
-                Текст, отображаемый в ячейке вместе с числом, должен быть заключен в кавычки ( <code class="highlighter-rouge">" "</code> ). Для отображения одиночного символа можно поставить перед ним обратную косую черту ( <code class="highlighter-rouge">\</code> ).<br/>
 
-                Чтобы задать пробел между числом и текстом, в код формата необходимо включить знак подчеркивания ( <code class="highlighter-rouge">_</code> ) и пробел или два знака подчеркивания.<br/>
-
-                Текст может располагаться и перед числом и после числа, а также одновременно перед числом и после числа.<br/>
-
-                Можно добавлять различный текст для различных разделов формата. Например, формат<br/>
-
-                <code class="highlighter-rouge">0,00_ "Прибыль";0,00_ "Убыток";0,00;Основной</code><br/>
-
-                устанавливает отображение положительных чисел с текстом <code class="highlighter-rouge">Прибыль</code>, отрицательных – с текстом <code class="highlighter-rouge">Убыток</code>, а нулевых значений без текста.<br/>
-
-                Текст можно добавлять и в форматы с условиями. Например, формат<br/>
-
-                <code class="highlighter-rouge">[<=36,6]0,0"_ Нормальная";[>36,6]0,0"_ Повышенная"</code><br/>
-
-                устанавливает отображение чисел меньших или равных <code class="highlighter-rouge">36,6</code> с текстом <code class="highlighter-rouge">Нормальная</code>, а чисел более <code class="highlighter-rouge">36,6</code> – с текстом <code class="highlighter-rouge">Повышенная</code>.<br/>
-            </div>
-            <div class="sticker-right sticker-inverse text-center" data-sticker="Текстовый раздел">
-                Текстовый раздел позволяет отображать в ячейке постоянный текст вместе с текстом, вводимым с клавиатуры. Текстовый раздел включает собственно текст и знак @, установленный перед текстом или после текста. Текст должен быть заключен в кавычки (" "). Между символами текста можно использовать пробелы, ставить знаки препинания, скобки и т. д.<br/>
-
-                Текстовый раздел может быть единственным разделом формата. Например, формат<br/>
-
-                "Студент" @<br/>
-
-                устанавливает в ячейке отображение слова Студент перед любым текстом в ячейке, а формат<br/>
-
-                @" - сотрудник"<br/>
-
-                устанавливает в ячейке отображение текста - сотрудник после любого текста в ячейке.<br/>
-
-                Если в ячейку с таким форматом вводится число или дата, то Microsoft Excel воспринимает это число не как число, а как текст.<br/>
-
-                Текстовый раздел также может присутствовать в формате наряду с другими разделами. В этом случае он всегда является последним разделом. Например, формат<br/>
-
-                ДД.ММ.ГГ;@" - Ошибка"<br/>
-
-                устанавливает в ячейке отображение даты в формате ДД.ММ.ГГ при вводе текста или цифр, не являющихся датой, в ячейке справа от введенных данных отображается текст - Ошибка.<br/>
-
-                Можно изменять цвет шрифта при использовании текстового раздела. Например, формат<br/>
-
-                ДД.ММ.ГГ;[Красный]@" - Ошибка"<br/>
-
-                Работает также, как и в предыдущем случае, но введенные ошибочные данные и текст - Ошибка будут отображены красным шрифтом.<br/>
-            </div>
-            <div class="sticker-right sticker-inverse text-center" data-sticker="Удаление личного формата">
-
-                Отобразите вкладку Число диалогового окна Формат ячеек.<br/>
-                В списке Числовые форматы выберите (все форматы) (см. рис. 9.16).<br/>
-                В поле Тип выберите удаляемый формат и нажмите кнопку Удалить. Нажмите кнопку Закрыть.<br/>
-
-            </div>
-            <div class="sticker-right sticker-inverse text-center" data-sticker="Упражнение 9">
-                Запустите Microsoft Excel 2019.<br/>
-
-                Откройте файл exercise_09.xlsx.<br/>
-                Задание 1<br/>
-
-                Перейдите к листу Лист 1.<br/>
-                Для ячеек столбца Стоимость, руб. ( В2:В6 ) установите денежный формат (р.).<br/>
-                Для ячеек столбца Скидка ( С2:С6 ) увеличьте разрядность до четырех знаков после запятой.<br/>
-                Для ячеек столбца Скидка, % ( D2:D6 ) установите процентный формат.<br/>
-                Для ячеек столбца Дата размещения ( E2:E6 ) установите формат даты в последовательности: месяц (слово), год (четырьмя цифрами), без указания числа ( Июль 2007 ).<br/>
-                Для ячеек столбца Дата исполнения ( F2:F6 ) установите формат даты в последовательности: число (цифрами), месяц (цифрами) без указания года ( 14.3 ).<br/>
-                Для ячеек столбца Стоимость, $ ( G2:G6 ) установите денежный формат ( $ ).<br/>
-                Для ячеек столбца Затраты ( H2:H9 ) установить общий формат данных.<br/>
-                Для ячеек столбца Количество ( I2:I6 ) установите формат с разделителями разрядов.<br/>
-                Для ячеек столбца Код заказа ( J2:J6 ) установите текстовый формат.<br/>
-
-                Задание 2<br/>
-
-                Перейдите к листу Лист 2.<br/>
-                Для ячеек G2:G26 установите числовой формат, отображающие положительные числа шрифтом синего цвета, а отрицательные – шрифтом красного цвета.<br/>
-                Для ячеек F2:F26 установите числовой формат, отображающий числа более 50 шрифтом синего цвета, а менее 50 – шрифтом красного цвета.
-                Для ячеек С2:С26 установите числовой формат, отображающий даты в виде дня недели полным словом.<br/>
-                Для ячеек В2:В26 установите числовой формат, отображающий после числа текст "штук".<br/>
-                Для ячеек А2:А26 установите числовой формат, отображающий перед текстом текст "Шоколад".<br/>
-
-                Сохраните файл под именем Lesson_09.<br/>
-
-                Закройте Microsoft Excel 2019.
-            </div>
         </div>
-
-    </div>
+    </main>
+    <!-- page-content" -->
 </div>
+<!-- page-wrapper -->
 <script src="JS/jquery-3.5.1.min.js"></script>
 <script src="JS/popper.min.js"></script>
 <script src="JS/bootstrap.min.js"></script>
+<script src="JS/sidebar.js"></script>
 
 <script src="JS/control-modal-b4-v.1.1.js"></script>
 <script>
