@@ -587,3 +587,9 @@ body
     height: 95%;
     width: 95%;
 }
+.new-version {
+    right: -10px;
+    position: fixed;
+    top: 5px;
+    z-index: 1111;
+}
