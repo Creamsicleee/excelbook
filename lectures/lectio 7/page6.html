@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.bundle.js" type="text/javascript"></script>
+
+
+
+<div class="container">
+<div class="row">
+    <div class="col-12 font-weight-bold h4">Работа с базами данных</div>
+    <div class="col-12 font-weight-bold h5">О функциях для работы с базами данных</div>
+    <div class="col-12" style="padding-top: 5px">Под базой данных в Microsoft Excel понимают таблицу, организованную по строкам и столбцам. В Microsoft Excel включены функции, используемые для анализа данных из списков или баз данных.</div>
+    <div class="col-12" style="padding-top: 5px">Таблица (база данных) для удобства использования функций должна быть соответствующим образом оформлена. Пример оформления базы данных приведен на <a href="#pic7.19">рис. 7.19</a>.</div>
+    <div class="col-12" style="padding-top: 5px"><img class="img-fluid" id="pic7.19" width="auto" src="img/рис%207.19.bmp"></div>
+    <div class="col-12" style="padding-top: 5px"><b>Рис. 7.19.</b> Пример таблицы, организованной для работы с функциями баз данных</div>
+    <div class="col-12" style="padding-top: 5px">Любая из функций работы с базами данных использует три аргумента:</div>
+    <ul>
+        <li style="padding-top: 5px"><d>А</d> – база данных – интервал ячеек, формирующих список или базу данных. База данных представляет собой список связанных данных, в котором строки данных являются записями, а столбцы – полями. Верхняя строка списка содержит названия всех столбцов. На <a href="#pic7.19">рис. 7.19</a> база данных – интервал ячеек <d>А5:H11</d> ;</li>
+        <li style="padding-top: 5px"><d>В</d> – поле – столбец, используемый функцией. Аргумент "поле" может быть задан как ячейка или как текст с названием столбца в двойных кавычках. На <a href="#pic7.19">рис. 7.19</a> поля – ячейки <d>А1</d>, <d>В1</d>, <d>С1</d>, <d>D1</d> и т. д. или названия столбцов: " <d>Товар</d> ", " <d>Партия</d> ", " <d>Цена</d> ", " <d>Затраты</d> " и т. д.;</li>
+        <li style="padding-top: 5px"><d>С</d> – критерий – интервал ячеек, который содержит задаваемые условия. Любой интервал, который содержит по крайней мере одно название столбца и по крайней мере одну ячейку под названием столбца с условием, может быть использован как аргумент " <d>критерий</d> ". В таблице на <a href="#pic7.19">рис. 7.19</a> для критериев выделен интервал ячеек <d>А1:H3</d>.</li>
+    </ul>
+    <div class="col-12" style="padding-top: 5px">Практически все функции для работы с базами данных имеют свои аналоги в категориях "Математические" и "Статистические". Отличие их в том, что они позволяют легко и просто производить выборки необходимых данных из базы и производить вычисления только выбранных данных.</div>
+    <div class="col-12 font-weight-bold h5" style="padding-top: 5px">Использование функций для работы с базами данных</div>
+    <div class="col-12" style="padding-top: 5px">Использование функций для работы с базами данных можно рассмотреть на примере суммирования. Для суммирования выбранных данных из базы данных используют функцию <d>БДСУММ</d>.</div>
+    <div class="col-12" style="padding-top: 5px">Например, в базе данных (см. <a href="#pic7.19">рис. 7.19</a>) необходимо суммировать затраты только на товары, объем партии которых меньше 40. При создании формулы (<a href="#pic7.20">рис. 7.20</a>) следует указать ячейки базы данных ( <d>А5:Н11</d> ), ячейку поля, по которому суммируются данные ( <d>D5</d> ) и ячейки критерия ( <d>В1:В2</d> ).</div>
+    <div class="col-12" style="padding-top: 5px"><img class="img-fluid" id="pic7.20" width="auto" src="img/рис%207.20.bmp"></div>
+    <div class="col-12" style="padding-top: 5px"><b>Рис. 7.20.</b> Суммирование с одним условием по одному столбцу</div>
+    <div class="col-12" style="padding-top: 5px">Можно использовать более сложные критерии. Например, в базе данных на <a href="#pic7.21">рис. 7.21</a> суммированы затраты только на товар " <d>Марс</d> ", объем партии которого меньше <d>40</d>.</div>
+    <div class="col-12" style="padding-top: 5px"><img class="img-fluid" id="pic7.21" width="auto" src="img/рис%207.21.bmp"></div>
+    <div class="col-12" style="padding-top: 5px"><b>Рис. 7.21.</b> Суммирование с двумя условиями по двум столбцам</div>
+    <div class="col-12" style="padding-top: 5px">Можно использовать более сложные критерии. Например, в базе данных на <a href="#pic7.21">рис. 7.21</a> суммированы затраты только на товар " <d>Марс</d> ", объем партии которого меньше <d>40</d>.</div>
+    <div class="col-12" style="padding-top: 5px">Или, например, в базе данных на <a href="#pic7.22">рис. 7.22</a> суммированы затраты только на товары, объем партии которых меньше <d>40</d>, но больше <d>30</d>.</div>
+    <div class="col-12" style="padding-top: 5px"><img class="img-fluid" id="pic7.22" width="auto" src="img/рис%207.22.bmp"></div>
+    <div class="col-12" style="padding-top: 5px"><b>Рис. 7.22.</b> Суммирование с двумя условиями по одному столбцу</div>
+    <div class="col-12" style="padding-top: 5px">Аналогично функции <d>БДСУММ</d> можно использовать и другие функции для работы с базами данных.</div>
+</div>
+    <div class="row w-50  m-auto text-center p-3">
+        <div class="col-2 p-0"><a href="#">Лекция 6 </a>||</div>
+        <div class="col-2 p-0">Лекция 7:</div>
+        <div class="col p-0"><a href="index.html" target="_self">1</a></div>
+        <div class="col p-0"><a href="page2.html" target="_self">2</a></div>
+        <div class="col p-0"><a href="page3.html" target="_self">3</a></div>
+        <div class="col p-0"><a href="page4.html" target="_self">4</a></div>
+        <div class="col p-0"><a href="page5.html" target="_self">5</a></div>
+        <div class="col p-0"><a href="page6.html" target="_self">6</a></div>
+        <div class="col p-0"><a href="page7.html" target="_self">7</a></div>
+        <div class="col-2 p-0">|| <a href="#">Лекция 8</a></div>
+    </div>
+</div>
+
+</body>
+</html>
