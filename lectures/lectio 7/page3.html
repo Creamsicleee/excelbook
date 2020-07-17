@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.bundle.js" type="text/javascript"></script>
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 font-weight-bold h4">Возведение в степень</div>
+            <div class="col-12" style="padding-top: 5px">Для возведения в степень используют функцию <d>СТЕПЕНЬ</d>.</div>
+            <div class="col-12" style="padding-top: 5px"><d>СТЕПЕНЬ(А;В)</d> ,</div>
+            <div class="col-12" style="padding-top: 5px">где <d>A</d> – число, возводимое в степень;</div>
+            <div class="col-12" style="padding-top: 5px"><d>В</d> – показатель степени, в которую возводится число.</div>
+            <div class="col-12" style="padding-top: 5px">Отрицательные числа можно возводить только в степень, значение которой является целым числом. В остальном ограничений на возведение в степень нет.</div>
+            <div class="col-12" style="padding-top: 5px">Для извлечения квадратного корня можно использовать функцию <d>КОРЕНЬ</d>.</div>
+            <div class="col-12" style="padding-top: 5px">Синтаксис функции</div>
+            <div class="col-12" style="padding-top: 5px"><d>КОРЕНЬ(А)</d> ,</div>
+            <div class="col-12" style="padding-top: 5px">где <d>A</d> – число, из которого извлекают квадратный корень.</div>
+            <div class="col-12" style="padding-top: 5px">Нельзя извлекать корень из отрицательных чисел.</div>
+            <div class="col-12 font-weight-bold h4" style="padding-top: 5px">Тригонометрические вычисления</div>
+            <div class="col-12" style="padding-top: 5px">В Microsoft Excel можно выполнять как прямые, так и обратные тригонометрические вычисления, то есть, зная значение угла, находить значения тригонометрических функций или, зная значение функции, находить значение угла.</div>
+            <div class="col-12" style="padding-top: 5px">Синтаксис всех прямых тригонометрических функций одинаков. Например, синтаксис функции <d>SIN</d>.</div>
+            <div class="col-12" style="padding-top: 5px"><d>SIN(А)</d> ,</div>
+            <div class="col-12" style="padding-top: 5px">где <d>A</d> – угол в радианах, для которого определяется синус.</div>
+            <div class="col-12" style="padding-top: 5px">Точно так же одинаков и синтаксис всех обратных тригонометрических функций. Например, синтаксис функции <d>АSIN</d>.</div>
+            <div class="col-12" style="padding-top: 5px"><d>АSIN(А)</d> ,</div>
+            <div class="col-12" style="padding-top: 5px">где <d>A</d> – число, равное синусу определяемого угла.</div>
+            <div class="col-12" style="padding-top: 5px">Следует обратить внимание, что все тригонометрические вычисления производятся для углов, измеряемых в радианах. Для перевода в более привычные градусы следует использовать функции преобразования ( <d>ГРАДУСЫ</d>, <d>РАДИАНЫ</d> ) или самостоятельно переводить значения используя функцию <d>ПИ</d> ().</div>
+            <div class="col-12" style="padding-top: 5px">Функция <d>ПИ</d> () вставляет значение числа \pi (пи). Аргументов функция не имеет, но скобки после названия удалять нельзя.</div>
+            <div class="col-12" style="padding-top: 5px">Например, при необходимости рассчитать значение синуса угла, указанного в градусах, необходимо его умножить на <d>ПИ()/180</d>.</div>
+            <div class="col-12" style="padding-top: 10px"><img class="img-fluid" id="pic7.7" width="auto" src="img/рис%207.7.bmp"></div>
+            <div class="col-12" style="padding-top: 5px"><b>Рис. 7.7.</b> Вычисление тригонометрических функций для углов, указанных в градусах</div>
+            <div class="col-12" style="padding-top: 10px">Преобразование чисел может потребоваться при переводе углов из градусов в радианы и обратно, при определении абсолютной величины числа, при преобразовании арабских цифр в римские.</div>
+            <div class="col-12" style="padding-top: 5px">Для перевода значения угла, указанного в радианах, в градусы используют функцию <d>ГРАДУСЫ</d>.</div>
+            <div class="col-12" style="padding-top: 5px">Синтаксис функции</div>
+            <div class="col-12" style="padding-top: 5px"><d>ГРАДУСЫ(А)</d> ,</div>
+            <div class="col-12" style="padding-top: 5px">где <d>А</d> – угол в радианах, преобразуемый в градусы.</div>
+            <div class="col-12" style="padding-top: 5px">Для перевода значения угла, указанного в градусах, в радианы используют функцию <d>РАДИАНЫ</d>.</div>
+            <div class="col-12" style="padding-top: 5px"><d>РАДИАНЫ(А)</d> ,</div>
+            <div class="col-12" style="padding-top: 5px">где <d>А</d> – угол в градусах, преобразуемый в радианы.</div>
+            <div class="col-12" style="padding-top: 5px">Функции ГРАДУСЫ и РАДИАНЫ удобно использовать с тригонометрическими функциями. Например, при необходимости рассчитать значение синуса угла, указанного в градусах (<a href="#pic7.8">рис. 7.8</a>), или рассчитать в градусах значение арксинуса (<a href="#pic7.9">рис. 7.9</a>).</div>
+            <div class="col-12" style="padding-top: 10px"><img class="img-fluid" id="pic7.8" width="auto" src="img/рис%207.8.bmp"></div>
+            <div class="col-12" style="padding-top: 5px"><b>Рис. 7.8.</b> Вычисление тригонометрических функций для углов, указанных в градусах</div>
+            <div class="col-12" style="padding-top: 10px"><img class="img-fluid" id="pic7.9" width="auto" src="img/рис%207.9.bmp"></div>
+            <div class="col-12" style="padding-top: 5px"><b>Рис. 7.9.</b> Вычисление углов в градусах при использовании тригонометрических функций</div>
+            <div class="col-12" style="padding-top: 5px">Для определения абсолютной величины числа используют функцию <d>ABS</d>. Абсолютная величина числа – это число без знака.</div>
+            <div class="col-12" style="padding-top: 5px">Синтаксис функции</div>
+            <div class="col-12" style="padding-top: 5px"><d>ABS(А)</d> ,</div>
+            <div class="col-12" style="padding-top: 5px">где <d>А</d> – число, для которого определяется абсолютное значение.</div>
+            <div class="col-12" style="padding-top: 5px">Функция <d>ABS</d> часто применяется для преобразования результатов вычислений с использованием финансовых функций, которые в силу своих особенностей дают отрицательный результат вычислений. Например, при расчете стоимости инвестиции с использованием функции <d>ПС</d> результат получается отрицательным, поскольку эту сумму необходимо заплатить. Для преобразования результата в положительное число можно использовать функцию <d>ABS</d> (<a href="#pic7.10">рис. 7.10</a>).</div>
+            <div class="col-12" style="padding-top: 10px"><img class="img-fluid" id="pic7.10" width="auto" src="img/рис%207.10.bmp"></div>
+            <div class="col-12" style="padding-top: 5px"><b>Рис. 7.10.</b> Преобразование в положительное число</div>
+            <div class="col-12" style="padding-top: 5px">Для преобразования числа, записанного арабскими цифрами в число, записанное римскими цифрами, используют функцию <d>РИМСКОЕ</d>.</div>
+            <div class="col-12" style="padding-top: 5px">Синтаксис функции</div>
+            <div class="col-12" style="padding-top: 5px"><d>РИМСКОЕ(А; В)</d> ,</div>
+            <div class="col-12" style="padding-top: 5px">где <d>А</d> – число, записанное арабскими цифрами;</div>
+            <div class="col-12" style="padding-top: 5px"><d>В</d> – форма записи числа.</div>
+            <div class="col-12" style="padding-top: 5px">Если значение аргумента <d>В</d> не указано или указано число 0, то используется классическая форма записи римского числа. При значениях аргумента <d>В</d> от <d>1</d> до <d>4</d> используются различные формы упрощенной записи римских чисел.</div>
+            <div class="col-12" style="padding-top: 5px">Функцию <d>РИМСКОЕ</d> нельзя использовать для отрицательных чисел, а также для чисел больше <d>3999</d>.</div>
+        </div>
+    </div>
+
+
+    <div class="row w-50  m-auto text-center p-3">
+        <div class="col-2 p-0"><a href="#">Лекция 6 </a>||</div>
+        <div class="col-2 p-0">Лекция 7:</div>
+        <div class="col p-0"><a href="index.html" target="_self">1</a></div>
+        <div class="col p-0"><a href="page2.html" target="_self">2</a></div>
+        <div class="col p-0"><a href="page3.html" target="_self">3</a></div>
+        <div class="col p-0"><a href="page4.html" target="_self">4</a></div>
+        <div class="col p-0"><a href="page5.html" target="_self">5</a></div>
+        <div class="col p-0"><a href="page6.html" target="_self">6</a></div>
+        <div class="col p-0"><a href="page7.html" target="_self">7</a></div>
+        <div class="col-2 p-0">|| <a href="#">Лекция 8</a></div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

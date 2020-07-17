@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.bundle.js" type="text/javascript"></script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 font-weight-bold h4">Умножение</div>
+        <div class="col-12">Для умножения используют функцию <d>ПРОИЗВЕД</d>.</div>
+        <div class="col-12" style="padding-top: 5px">Синтаксис функции</div>
+        <div class="col-12" style="padding-top: 5px"><d>ПРОИЗВЕД(А)</d> ,</div>
+        <div class="col-12">где <d>A</d>  – список от 1 до 30 элементов, которые требуется перемножить. Элемент может быть ячейкой, диапазоном ячеек, числом или формулой. Ссылки на пустые ячейки, текстовые или логические значения игнорируются.</div>
+        <div class="col-12" style="padding-top: 5px">Фактически данная функция заменяет непосредственное умножение с использованием оператора умножения ( <d>*</d> ). Так же как и при использовании функции <d>СУММ</d>, при использовании функции <d>ПРОИЗВЕД</d> добавление ячеек в диапазон перемножения автоматически изменяет запись диапазона в формуле. Например, если в таблицу вставить строку, то в формуле будет указан новый диапазон перемножения. Аналогично формула будет изменяться и при уменьшении диапазона.</div>
+        <div class="col-12 font-weight-bold h4" style="padding-top: 5px">Округление</div>
+        <div class="col-12">Округление чисел особенно часто требуется при денежных расчетах. Например, цену товара в рублях, как правило, нельзя устанавливать с точностью более двух знаков после запятой. Если же в результате вычислений получается большее число десятичных разрядов, требуется округление. В противном случае накапливание тысячных и десятитысячных долей рубля приведет в итоге к ошибкам в вычислениях.</div>
+        <div class="col-12" style="padding-top: 5px">Для округления чисел можно использовать целую группу функций.</div>
+        <div class="col-12" style="padding-top: 5px">Наиболее часто используют функции <d>ОКРУГЛ</d>, <d>ОКРУГЛВВЕРХ</d> и <d>ОКРУГЛВНИЗ</d>.</div>
+        <div class="col-12" style="padding-top: 5px">Синтаксис функции <d>ОКРУГЛ</d></div>
+        <div class="col-12" style="padding-top: 5px"><d>ОКРУГЛ(А;В) ,</d></div>
+        <div class="col-12" style="padding-top: 5px">где <d>A</d> – округляемое число;</div>
+        <div class="col-12" style="padding-top: 5px"><d>В</d> – число знаков после запятой (десятичных разрядов), до которого округляется число.</div>
+        <div class="col-12" style="padding-top: 5px">Синтаксис функций <d>ОКРУГЛВВЕРХ</d> и <d>ОКРУГЛВНИЗ</d> точно такой же, что и у функции <d>ОКРУГЛ</d>.</div>
+        <div class="col-12" style="padding-top: 5px">Функция <d>ОКРУГЛ</d> при округлении отбрасывает числа меньшие <d>5</d>, а числа большие <d>5</d> округляет до следующего разряда. Функция <d>ОКРУГЛВВЕРХ</d> при округлении любые числа округляет до следующего разряда. Функция <d>ОКРУГЛВНИЗ</d> при округлении отбрасывает любые числа. Пример округления до двух знаков после запятой с использованием функций <d>ОКРУГЛ</d>, <d>ОКРУГЛВВЕРХ</d> и <d>ОКРУГЛВНИЗ</d> приведен на <a href="#pic7.4" >рис. 7.4.</a></div>
+        <div class="col-12" style="padding-top: 10px"><img class="img-fluid" id="pic7.4" width="auto" src="img/рис%207.4.bmp"></div>
+        <div class="col-12"><b>Рис. 7.4.</b> Округление до заданного количества десятичных разрядов</div>
+        <div class="col-12" style="padding-top: 10px">Функции <d>ОКРУГЛ</d>, <d>ОКРУГЛВВЕРХ</d> и <d>ОКРУГЛВНИЗ</d> можно использовать и для округления целых разрядов чисел. Для этого необходимо использовать отрицательные значения аргумента <d>В</d>.</div>
+        <div class="col-12" style="padding-top: 5px">Синтаксис функции</div>
+        <div class="col-12" style="padding-top: 5px"><d>ОТБР(А;В)</d> ,</div>
+        <div class="col-12" style="padding-top: 5px">где <d>A</d> – округляемое число;</div>
+        <div class="col-12" style="padding-top: 5px"><d>В</d> – число знаков после запятой (десятичных разрядов), до которого округляется число.</div>
+        <div class="col-12" style="padding-top: 5px">Фактически функция <d>ОТБР</d> отбрасывает лишние знаки, оставляя только количество знаков, указанное в аргументе <d>В</d>.</div>
+        <div class="col-12" style="padding-top: 5px">Так же как и функции <d>ОКРУГЛ</d>, <d>ОКРУГЛВВЕРХ</d> и <d>ОКРУГЛВНИЗ</d>, функцию <d>ОТБР</d> можно использовать для округления целых разрядов чисел. Для этого необходимо использовать отрицательные значения аргумента <d>В</d>.</div>
+        <div class="col-12" style="padding-top: 5px">Для округления числа до меньшего целого можно использовать функцию <d>ЦЕЛОЕ</d>.</div>
+        <div class="col-12" style="padding-top: 5px">Синтаксис функции</div>
+        <div class="col-12" style="padding-top: 5px"><d>ЦЕЛОЕ(А)</d> ,</div>
+        <div class="col-12" style="padding-top: 5px">где <d>A</d> – округляемое число.</div>
+        <div class="col-12" style="padding-top: 5px">Пример использования функции приведен на <a href="#pic7.5">рис. 7.5.</a></div>
+        <div class="col-12" style="padding-top: 10px"><img class="img-fluid" id="pic7.5" width="auto" src="img/рис%207.5.bmp"></div>
+        <div class="col-12" style="padding-top: 5px"><b>Рис. 7.5.</b> Округление до целого числа</div>
+        <div class="col-12" style="padding-top: 10px">Для округления числа с заданной точностью можно использовать функцию <d>ОКРУГЛТ</d>.</div>
+        <div class="col-12" style="padding-top: 5px">Синтаксис функции</div>
+        <div class="col-12" style="padding-top: 5px">где <d>A</d>  – округляемое число;</div>
+        <div class="col-12" style="padding-top: 5px"><d>В</d> – точность, с которой требуется округлить число.</div>
+        <div class="col-12" style="padding-top: 5px">Функция <d>ОКРУГЛТ</d> производит округление с избытком. Округление производится в том случае, если остаток от деления числа на точность больше или равен половине точности. Аргументы "число" и "точность" должны иметь один и тот же знак. В противном случае возвращается ошибка <d>#ЧИСЛО!</d>. Пример использования функции приведен на <a href="#pic7.6">рис. 7.6.</a></div>
+        <div class="col-12" style="padding-top: 10px"><img class="img-fluid" id="pic7.6" width="auto" src="img/рис%207.6.bmp"></div>
+        <div class="col-12" style="padding-top: 5px"><b>Рис. 7.6.</b> Округления с заданной точностью</div>
+        <div class="col-12" style="padding-top: 10px">Наконец, для округления до ближайшего четного или нечетного числа можно использовать функции <d>ЧЕТН</d> и <d>НЕЧЕТН</d>, а для ближайшего кратного большего или меньшего числа – функции <d>ОКРВЕРХ</d> и <d>ОКРВНИЗ</d>.</div>
+        <div class="col-12" style="padding-top: 5px">Синтаксис функции <d>ЧЕТН</d></div>
+        <div class="col-12" style="padding-top: 5px"><d>ЧЕТН(А)</d> ,</div>
+        <div class="col-12" style="padding-top: 5px">где <d>A</d> – округляемое число.</div>
+        <div class="col-12" style="padding-top: 5px">Функция <d>НЕЧЕТН</d> имеет такой же синтаксис.</div>
+        <div class="col-12" style="padding-top: 5px">Обе функции округляют положительные числа до ближайшего большего четного или нечетного числа, а отрицательные – до ближайшего меньшего четного или нечетного числа.</div>
+        <div class="col-12" style="padding-top: 5px">Синтаксис функции <d>ОКРВВЕРХ</d></div>
+        <div class="col-12" style="padding-top: 5px"><d>ОКРВВЕРХ(А;В)</d> ,</div>
+        <div class="col-12" style="padding-top: 5px">где <d>A</d> – округляемое число;</div>
+        <div class="col-12" style="padding-top: 5px"><d>В</d> – кратное, до которого требуется округлить.</div>
+        <div class="col-12" style="padding-top: 5px">Функция <d>ОКРВНИЗ</d> имеет такой же синтаксис.</div>
+        <div class="col-12" style="padding-top: 5px">Следует обратить внимание на различие в округлении и установке отображаемого числа знаков после запятой с использованием средств форматирования. При использовании числовых форматов изменяется только отображаемое число, а в вычислениях используется хранимое значение.</div>
+    </div>
+
+    <div class="row w-50  m-auto text-center p-3">
+        <div class="col-2 p-0"><a href="#">Лекция 6 </a>||</div>
+        <div class="col-2 p-0">Лекция 7:</div>
+        <div class="col p-0"><a href="index.html" target="_self">1</a></div>
+        <div class="col p-0"><a href="page2.html" target="_self">2</a></div>
+        <div class="col p-0"><a href="page3.html" target="_self">3</a></div>
+        <div class="col p-0"><a href="page4.html" target="_self">4</a></div>
+        <div class="col p-0"><a href="page5.html" target="_self">5</a></div>
+        <div class="col p-0"><a href="page6.html" target="_self">6</a></div>
+        <div class="col p-0"><a href="page7.html" target="_self">7</a></div>
+        <div class="col-2 p-0">|| <a href="#">Лекция 8</a></div>
+    </div>
+
+
+
+</div>
+
+
+</body>
+</html>
